@@ -34,6 +34,7 @@ Product Image Zoom for Woocommerce PRO's premium edition has an advanced setting
 * Work with all themes for WordPress.
 * Simple to use.
 * Developer-friendly and flexible.
+* WPML, Polylang, GTranslate and all others multi-language plugin support.
 
 
 ### PRO Version Features
