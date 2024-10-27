@@ -4,7 +4,7 @@ Tags: woocommerce zoom, woocommerce, magnifier, zoom, Product Gallery
 Requires at least: 5.0
 Tested up to: 6.6.2
 Requires PHP: 7.4
-Stable tag: 1.05.4
+Stable tag: 1.05.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -204,5 +204,8 @@ This plugin requires WooCommerce hooks to function. If your theme overrides the 
 
 = version 1.05.4 =
 * Tested with WooCommerce 8.3.1 and WordPress 6.4.1
+
+= version 1.05.6 =
+* Added discount notice.
 
 == Upgrade notice ==

@@ -3,7 +3,7 @@
  * Plugin Name:       Product Image Zoom for WooCommerce
  * Plugin URI:        https://wpbean.com/downloads/woocommerce-image-zoom-pro/
  * Description:       Highly customizable product image zoom plugin for Woocommerce Store. 
- * Version:           1.05.4
+ * Version:           1.05.6
  * Author:            wpbean
  * Author URI:        https://wpbean.com/
  * License:           GPL-2.0+
@@ -74,9 +74,9 @@ if( !function_exists('wpb_wiz_adding_scripts') ){
 		if( is_singular( 'product' ) ){
 			wp_enqueue_style( 'wpb-wiz-fancybox-css',  plugins_url( '/assets/css/jquery.fancybox.min.css', __FILE__ ), array(), '3.0' );
 			wp_enqueue_style( 'wpb-wiz-main-css',  plugins_url( '/assets/css/main.css', __FILE__ ), array(), '1.0' );
-			wp_enqueue_script('jquery');
-			wp_enqueue_script('wpb-wiz-fancybox', plugins_url( '/assets/js/jquery.fancybox.min.js', __FILE__ ), array('jquery'), '3.0', false);
-			wp_enqueue_script('wpb-wiz-elevatezoom', plugins_url('assets/js/jquery.ez-plus.js', __FILE__), array('jquery'), '3.0.8', false);
+
+			wp_enqueue_script('wpb-wiz-fancybox', plugins_url( '/assets/js/jquery.fancybox.min.js', __FILE__ ), array('jquery'), '3.0', true);
+			wp_enqueue_script('wpb-wiz-elevatezoom', plugins_url('assets/js/jquery.ez-plus.js', __FILE__), array('jquery'), '3.0.8', true);
 			wp_enqueue_script('wpb-wiz-plugin-main', plugins_url('assets/js/main.js', __FILE__), array('jquery'), '1.0', true);
 			wp_localize_script('wpb-wiz-plugin-main', 'wpb_wiz_free', array( 
 	            'loading_icon'  => plugins_url( '/assets/images/spinner.gif', __FILE__ ),
@@ -156,7 +156,7 @@ function wpb_wiz_free_init(){
 	load_plugin_textdomain( 'woocommerce-image-zoom', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	register_deactivation_hook( plugin_basename( __FILE__ ), 'wpb_wiz_lite_plugin_deactivation' );
 	add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wpb_wiz_free_plugin_actions_links' );
-	add_action( 'admin_notices', 'wpb_wiz_pro_discount_admin_notice' );
+	//add_action( 'admin_notices', 'wpb_wiz_pro_discount_admin_notice' );
 	add_action( 'admin_init', 'wpb_wiz_pro_discount_admin_notice_dismissed' );
 
 	if ( is_plugin_active( 'woocommerce/woocommerce.php' ) || is_plugin_active_for_network( 'woocommerce/woocommerce.php' ) ) {
@@ -173,6 +173,11 @@ function wpb_wiz_free_init(){
 		require_once dirname( __FILE__ ) . '/inc/wpb-wiz-filter.php';
 		require_once dirname( __FILE__ ) . '/admin/class.settings-api.php';
 		require_once dirname( __FILE__ ) . '/admin/plugin-settings.php';
+
+		if( is_admin() ){
+			require_once dirname( __FILE__ ) . '/inc/DiscountPage/DiscountPage.php';
+			new WPBean_WC_Zoom_DiscountPage();
+		}
 
 	}else{
 		add_action( 'admin_notices', 'wpb_wiz_free_admin_notice' );
