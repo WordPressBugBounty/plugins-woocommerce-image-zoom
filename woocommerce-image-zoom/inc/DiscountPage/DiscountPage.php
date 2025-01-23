@@ -17,7 +17,7 @@ class WPBean_WC_Zoom_DiscountPage
 		'menu_slug'   			=> 'wpbean-discount',
 		'icon_url'    			=> '',
 		'menu_type'   			=> 'submenu',                  // menu or submenu.
-		'parent_slug' 			=> '',   // for submenu only.
+		'parent_slug' 			=> 'options-general.php',   // for submenu only.
 		'capability'  			=> 'manage_options',
 		'position'    			=> 9,
 		'utm_source'    		=> 'WCZoomFreeVersion',

@@ -3,7 +3,7 @@
  * Plugin Name:       Product Image Zoom for WooCommerce
  * Plugin URI:        https://wpbean.com/downloads/woocommerce-image-zoom-pro/
  * Description:       Highly customizable product image zoom plugin for Woocommerce Store. 
- * Version:           1.05.7
+ * Version:           1.05.8
  * Author:            wpbean
  * Author URI:        https://wpbean.com/
  * License:           GPL-2.0+
@@ -156,7 +156,7 @@ function wpb_wiz_free_init(){
 	load_plugin_textdomain( 'woocommerce-image-zoom', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	register_deactivation_hook( plugin_basename( __FILE__ ), 'wpb_wiz_lite_plugin_deactivation' );
 	add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wpb_wiz_free_plugin_actions_links' );
-	//add_action( 'admin_notices', 'wpb_wiz_pro_discount_admin_notice' );
+	add_action( 'admin_notices', 'wpb_wiz_pro_discount_admin_notice' );
 	add_action( 'admin_init', 'wpb_wiz_pro_discount_admin_notice_dismissed' );
 
 	if ( is_plugin_active( 'woocommerce/woocommerce.php' ) || is_plugin_active_for_network( 'woocommerce/woocommerce.php' ) ) {
@@ -174,10 +174,10 @@ function wpb_wiz_free_init(){
 		require_once dirname( __FILE__ ) . '/admin/class.settings-api.php';
 		require_once dirname( __FILE__ ) . '/admin/plugin-settings.php';
 
-		if( is_admin() ){
-			require_once dirname( __FILE__ ) . '/inc/DiscountPage/DiscountPage.php';
-			new WPBean_WC_Zoom_DiscountPage();
-		}
+		// if( is_admin() ){
+		// 	require_once dirname( __FILE__ ) . '/inc/DiscountPage/DiscountPage.php';
+		// 	new WPBean_WC_Zoom_DiscountPage();
+		// }
 
 	}else{
 		add_action( 'admin_notices', 'wpb_wiz_free_admin_notice' );
