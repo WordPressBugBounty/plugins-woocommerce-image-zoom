@@ -2,7 +2,7 @@
 Contributors: wpbean, imranwpb
 Tags: woocommerce zoom, woocommerce, magnifier, zoom, Product Gallery
 Requires at least: 5.0
-Tested up to: 6.7.1
+Tested up to: 6.8.1
 Requires PHP: 7.4
 Stable tag: 1.05.8
 License: GPLv3
