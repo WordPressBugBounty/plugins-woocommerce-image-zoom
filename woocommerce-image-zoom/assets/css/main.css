@@ -1,3 +1,6 @@
+.zoomContainer {
+	overflow: hidden;
+}
 .wpb-wiz-woocommerce-product-gallery__wrapper .wp-post-image {
 	border-radius: 0;
 	width: 100%;

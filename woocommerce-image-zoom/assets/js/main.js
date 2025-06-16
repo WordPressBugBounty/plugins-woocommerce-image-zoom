@@ -21,7 +21,6 @@
         gallery: 'wpb_wiz_gallery',
         cursor: 'pointer',
         galleryActiveClass: "active",
-        imageCrossfade: true,
         loadingIcon: wpb_wiz_free.loading_icon,
         zoomType: 'inner',
         responsive: true,
