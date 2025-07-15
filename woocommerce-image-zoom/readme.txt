@@ -25,7 +25,7 @@ Product Image Zoom for Woocommerce PRO's premium edition has an advanced setting
 >[Upgrade to the Pro Version](https://wpbean.com/downloads/woocommerce-image-zoom-pro/)  |  [Free Version DEMO](http://demo1.wpbean.com/product/demo-product-9/)  |  [PRO Version DEMO](http://demo2.wpbean.com/?product=flying-ninja)  |  [Support](http://wpbean.com/support/) |  [Screenshots](https://wordpress.org/plugins/woocommerce-image-zoom/screenshots/)
 
 ### 👋 Need expert WordPress & WooCommerce development help?
-I’m currently available for hire — WordPress and WooCommerce development, custom features, bug fixing, speed optimization, performance tuning, SEO improvements, and more.
+I’m currently available for hire — WordPress and WooCommerce development, custom features, bug fixing, speed optimization, performance tuning, full site development, and more.
 With over 10 years of experience building high-quality WordPress solutions, I can help you take your website to the next level. 
 [__Contact me here →__](https://wpbean.com/web-development-services/?utm_source=WordPress&utm_medium=desc-link&utm_campaign=available-for-hire&utm_content=WooCommerce+Image+Zoom)
 
