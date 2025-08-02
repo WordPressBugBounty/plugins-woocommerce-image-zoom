@@ -3,12 +3,12 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-class WpBean_AccordionMenu_AvailableHire
+class WpBean_WC_Zoom_AvailableHire
 {
 	/**
 	 * Holds the instance of the class.
 	 *
-	 * @var WpBean_AccordionMenu_AvailableHire
+	 * @var WpBean_WC_Zoom_AvailableHire
 	 */
 	private static $initialized = false;
 	

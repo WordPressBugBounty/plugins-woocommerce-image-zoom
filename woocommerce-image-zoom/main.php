@@ -4,7 +4,7 @@
  * Plugin Name:       Product Image Zoom for WooCommerce
  * Plugin URI:        https://wpbean.com/downloads/woocommerce-image-zoom-pro/
  * Description:       Highly customizable product image zoom plugin for Woocommerce Store. 
- * Version:           1.07
+ * Version:           1.08
  * Author:            wpbean
  * Author URI:        https://wpbean.com/
  * License:           GPL-2.0+
@@ -184,10 +184,10 @@ function wpb_wiz_free_init()
 		require_once dirname(__FILE__) . '/admin/class.settings-api.php';
 		require_once dirname(__FILE__) . '/admin/plugin-settings.php';
 
-		if (!class_exists('WpBean_AccordionMenu_AvailableHire')) {
+		if (!class_exists('WpBean_WC_Zoom_AvailableHire')) {
 			include_once __DIR__ . '/inc/AvailableHire/AvailableHire.php';
 		}
-		new WpBean_AccordionMenu_AvailableHire();
+		new WpBean_WC_Zoom_AvailableHire();
 	} else {
 		add_action('admin_notices', 'wpb_wiz_free_admin_notice');
 	}
