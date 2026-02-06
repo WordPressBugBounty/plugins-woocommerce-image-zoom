@@ -29,10 +29,9 @@ function wpb_wiz_apply_modified_images()
 	if (version_compare($woocommerce->version, '3.0', '>=')) {
 		remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
 		add_action('woocommerce_before_single_product_summary', 'wpb_wiz_modified_single_images', 20);
-		// electro theme support
-		remove_action('woocommerce_before_single_product_summary', 'electro_show_product_images', 20);
+		remove_action('woocommerce_before_single_product_summary', 'electro_show_product_images', 20); // electro theme support
 	} else {
-		add_filter('woocommerce_single_product_image_html', 'wpb_aiz_get_single_images');
+		add_filter('woocommerce_single_product_image_html', 'wpb_wiz_get_single_images');
 	}
 }
 add_action('template_redirect', 'wpb_wiz_apply_modified_images', 20);
@@ -64,7 +63,7 @@ function wpb_wiz_woocommerce_show_product_thumbnails()
 /**
  * Get Modified images for zoom
  */
-function wpb_aiz_get_single_images()
+function wpb_wiz_get_single_images()
 {
 	global $post, $woocommerce, $product;
 
@@ -103,14 +102,6 @@ function wpb_aiz_get_single_images()
 			return sprintf('<img src="%s" alt="%s" />', wc_placeholder_img_src(), esc_html__('Placeholder', 'woocommerce-image-zoom'));
 		}
 	}
-}
-
-/**
- * echo Get Modified images for zoom
- */
-function wpb_aiz_single_images()
-{
-	echo wpb_aiz_get_single_images();
 }
 
 /**

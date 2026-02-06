@@ -1,33 +1,24 @@
-=== Product Image Zoom for WooCommerce by WPBean ===
+=== Product Image Zoom & Gallery for WooCommerce by WPBean ===
 Contributors: wpbean, imranwpb
 Tags: woocommerce zoom, woocommerce, magnifier, zoom, Product Gallery
 Requires at least: 5.0
-Tested up to: 6.8.2
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.08
-License: GPLv3
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Stable tag: 2.1
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-WPB Product Image Zoom for WooCommerce can provide an interactive shopping experience to customers by adding a zoom feature and gallery images slider.
+Add responsive image zoom effects to WooCommerce product images for better visual engagement and a closer look at product details.
 
 == Description ==
 
-Product Image Zoom for WooCommerce adds a zoom feature to product images with the LightBox popup image gallery.
+WooCommerce Image Zoom is a lightweight and user-friendly plugin that enhances your online store by adding responsive zoom functionality to product images. Designed specifically for WooCommerce, this plugin allows customers to get a closer, high-definition look at product details simply by hovering over or tapping on product images — helping build trust and reduce purchase hesitation.
 
-Do you run your online store with WooCommerce? The most crucial feature your website should have is the ability to enlarge WooCommerce product images.
+With multiple zoom styles and customizable settings, WooCommerce Image Zoom gives you full control over how zoom effects appear on single product pages. You can adjust zoom window size, lens shape, magnification level, and animation behavior to match your store’s design and user experience needs, all without writing any code. Whether shoppers are browsing on desktop or touch devices, the zoom effect works smoothly and responsively across screen sizes.
 
-The more information about your goods you can give to potential buyers, the more sales you'll make. 
-
-You can quickly and simply zoom in on product images with the help of Product Image Zoom for WooCommerce.
-
-Product Image Zoom for Woocommerce PRO's premium edition has an advanced settings panel. Therefore, you can customize the magnification as necessary.
+Built for performance and compatibility, this plugin integrates seamlessly with modern WooCommerce themes and maintains fast loading times without adding unnecessary bloat. By giving users an immersive product preview experience, WooCommerce Image Zoom can help increase engagement, reduce returns due to unexpected details, and drive higher conversions.
 
 >[Upgrade to the Pro Version](https://wpbean.com/downloads/woocommerce-image-zoom-pro/)  |  [Free Version DEMO](http://demo1.wpbean.com/product/demo-product-9/)  |  [PRO Version DEMO](http://demo2.wpbean.com/?product=flying-ninja)  |  [Support](http://wpbean.com/support/) |  [Screenshots](https://wordpress.org/plugins/woocommerce-image-zoom/screenshots/)
-
-### 👋 Need expert WordPress & WooCommerce development help?
-I’m currently available for hire — WordPress and WooCommerce development, custom features, bug fixing, speed optimization, performance tuning, full site development, and more.
-With over 10 years of experience building high-quality WordPress solutions, I can help you take your website to the next level. 
-[__Contact me here →__](https://wpbean.com/web-development-services/?utm_source=WordPress&utm_medium=desc-link&utm_campaign=available-for-hire&utm_content=WooCommerce+Image+Zoom)
 
 ### Plugin Features
 
@@ -226,5 +217,15 @@ This plugin requires WooCommerce hooks to function. If your theme overrides the 
 
 = version 1.08 =
 * Available hire class prefixed.
+
+= version 1.09 =
+* Code quality improved.
+* Checked with the Plugin Check (PCP).
+
+= version 2.0 =
+* Fixed the main image on click popup issue if there is no gallery images.
+
+= version 2.1 =
+* Updated plugin settings page url in the plugin action links.
 
 == Upgrade notice ==

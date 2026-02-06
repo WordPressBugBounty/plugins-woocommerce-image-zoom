@@ -1,28 +1,29 @@
-(function($) { 
-  'use strict';
+(function ($) {
+    "use strict";
 
-  	var image = $('.woocommerce-product-gallery__image').find('.wp-post-image');
+    var image = $(".woocommerce-product-gallery__image").find(".wp-post-image");
 
-	/**
-	 * Remove srcset & size attr
-	 */
-	
-	$("#wpb_wiz_gallery a").on("click", function(){ 
-		$('.wpb-wiz-woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image > a img').removeAttr('srcset');
-		$('.wpb-wiz-woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image > a img').removeAttr('sizes');
-	});
+    /**
+     * Remove srcset & size attr
+     */
+    $("#wpb_wiz_gallery a").on("click", function () {
+        $(
+            ".wpb-wiz-woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image > a img"
+        ).removeAttr("srcset");
+        $(
+            ".wpb-wiz-woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image > a img"
+        ).removeAttr("sizes");
+    });
 
-
-	/**
-	 * Init Zoom
-	 */
-	
-	$(image).ezPlus({
-        gallery: 'wpb_wiz_gallery',
-        cursor: 'pointer',
+    /**
+     * Init Zoom
+     */
+    $(image).ezPlus({
+        gallery: "wpb_wiz_gallery",
+        cursor: "pointer",
         galleryActiveClass: "active",
         loadingIcon: wpb_wiz_free.loading_icon,
-        zoomType: 'inner',
+        zoomType: "inner",
         responsive: true,
         scrollZoom: false,
         zoomWindowWidth: 400,
@@ -36,35 +37,56 @@
     });
 
     $(image).bind("click", function (e) {
-        var ez = $(image).data('ezPlus');
+        var gallerySel =
+            ".wpb-wiz-woocommerce-product-gallery__wrapper #wpb_wiz_gallery";
+
+        // If the gallery element does not exist, open the main image in Fancybox
+        if ($(gallerySel).length === 0) {
+            var href = $(this).closest("a").attr("href") || $(this).attr("src");
+            if (href) {
+                $.fancybox.open([{ src: href, type: "image" }]);
+            }
+            return false;
+        }
+
+        // Otherwise bind it with the zoom gallery
+        var ez = $(image).data("ezPlus");
         ez.closeAll(); //NEW: This function force hides the lens, tint and window
         $.fancybox.open(ez.getGalleryListFancyboxThree());
         return false;
     });
 
+    /**
+     * Zoom image change with variation
+     */
+    $(document).on(
+        "found_variation",
+        "form.variations_form",
+        function (event, variation) {
+            var ez = image.data("ezPlus");
+            if (
+                variation &&
+                variation.image &&
+                variation.image.src &&
+                variation.image.src.length > 1
+            ) {
+                ez.swaptheimage(variation.image.src, variation.image.full_src);
+            }
+        }
+    );
 
-	/**
-	 * Zoom image change with variation
-	 */
-  	
-  	$(document).on( 'found_variation', 'form.variations_form', function( event, variation ) {
-  		var ez 	= image.data('ezPlus');
-		if ( variation && variation.image && variation.image.src && variation.image.src.length > 1 ) {
-			ez.swaptheimage( variation.image.src, variation.image.full_src );
-		}
-	});
+    /**
+     * Back to the main image for zoom after reseting the variation
+     */
+    $(document).on("click", ".reset_variations", function (event) {
+        var featureImage = $(
+                ".wpb-wiz-woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image > a img"
+            ).attr("src"),
+            featureImageLarge = $(
+                ".wpb-wiz-woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image > a"
+            ).attr("href");
 
-
-  	/**
-  	 * Back to the main image for zoom after reseting the variation
-  	 */
-  	
-	$(document).on( 'click', '.reset_variations', function( event ) {
-		var featureImage      = $(".wpb-wiz-woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image > a img").attr("src"),
-			featureImageLarge = $(".wpb-wiz-woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image > a").attr("href");
-			
-		var ez 	= image.data('ezPlus');
-		ez.swaptheimage( featureImage, featureImageLarge );
-	});
-	
+        var ez = image.data("ezPlus");
+        ez.swaptheimage(featureImage, featureImageLarge);
+    });
 })(jQuery);

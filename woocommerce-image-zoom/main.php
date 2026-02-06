@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Plugin Name:       Product Image Zoom for WooCommerce
+ * Plugin Name:       Product Image Zoom & Gallery for WooCommerce by WPBean
  * Plugin URI:        https://wpbean.com/downloads/woocommerce-image-zoom-pro/
  * Description:       Highly customizable product image zoom plugin for Woocommerce Store. 
- * Version:           1.08
+ * Version:           2.1
  * Author:            wpbean
  * Author URI:        https://wpbean.com/
  * License:           GPL-2.0+
@@ -20,11 +20,9 @@ if (! function_exists('is_plugin_active_for_network')) {
 	require_once(ABSPATH . '/wp-admin/includes/plugin.php');
 }
 
-
 /**
  * Define constants
  */
-
 if (! defined('WPB_WIZ_FREE_INIT')) {
 	define('WPB_WIZ_FREE_INIT', plugin_basename(__FILE__));
 }
@@ -36,7 +34,6 @@ if (! defined('WPB_WIZ_FREE_PLUGIN_DIR')) {
 /**
  * This version can't be activate if premium version is active
  */
-
 if (defined('WPB_WIZ_PLUGIN_DIR')) {
 	function wpb_wiz_install_free_admin_notice()
 	{
@@ -52,26 +49,19 @@ if (defined('WPB_WIZ_PLUGIN_DIR')) {
 	return;
 }
 
-
 /**
  * Add plugin action links
  */
-
 function wpb_wiz_free_plugin_actions_links($links)
 {
-
 	$links[] = '<a href="https://wpbean.com/support/" target="_blank">' . esc_html__('Support', 'woocommerce-image-zoom') . '</a>';
-	$links[] = '<a href="options-general.php?page=wpb_woocommerce_image_zoom_settings">' . esc_html__('Settings', 'woocommerce-image-zoom') . '</a>';
-
+	$links[] = '<a href="admin.php?page=wpb_woocommerce_image_zoom_settings">' . esc_html__('Settings', 'woocommerce-image-zoom') . '</a>';
 	return $links;
 }
-
-
 
 /**
  * Enqueue Scripts
  */
-
 if (!function_exists('wpb_wiz_adding_scripts')) {
 	function wpb_wiz_adding_scripts()
 	{
@@ -89,12 +79,9 @@ if (!function_exists('wpb_wiz_adding_scripts')) {
 	}
 }
 
-
-
 /**
  * Disable zoom in Mobile
  */
-
 if (!function_exists('wpb_wiz_disable_in_mobile')) {
 	function wpb_wiz_disable_in_mobile()
 	{
@@ -104,11 +91,9 @@ if (!function_exists('wpb_wiz_disable_in_mobile')) {
 	}
 }
 
-
 /**
- * Woocommerce not installed error message
+ * WooCommerce not installed error message
  */
-
 if (!function_exists('wpb_wiz_free_admin_notice')) {
 	function wpb_wiz_free_admin_notice()
 	{
@@ -122,24 +107,21 @@ if (!function_exists('wpb_wiz_free_admin_notice')) {
 	}
 }
 
-
 /**
  * Pro version discount
  */
-
 function wpb_wiz_pro_discount_admin_notice()
 {
 	$user_id = get_current_user_id();
 	if (!get_user_meta($user_id, 'wpb_wiz_pro_discount_dismissed')) {
-		printf('<div class="wpb-wiz-discount-notice updated" style="padding: 30px 20px;border-left-color: #27ae60;border-left-width: 5px;margin-top: 20px;"><p style="font-size: 18px;line-height: 32px">%s <a target="_blank" href="%s">%s</a>! %s <b>%s</b></p><a href="%s">%s</a></div>', esc_html__('Get a 10% exclusive discount on the premium version of the', 'woocommerce-image-zoom'), 'https://wpbean.com/downloads/woocommerce-image-zoom-pro/', esc_html__('Product Image Zoom for WooCommerce', 'woocommerce-image-zoom'), esc_html__('Use discount code - ', 'woocommerce-image-zoom'), '10PERCENTOFF', esc_url(add_query_arg('wpb-wiz-pro-discount-admin-notice-dismissed', 'true')), esc_html__('Dismiss', 'woocommerce-image-zoom'));
+		printf('<div class="wpb-wiz-discount-notice updated" style="padding: 30px 20px;border-left-color: #27ae60;border-left-width: 5px;margin-top: 20px;"><p style="font-size: 18px;line-height: 32px">%s <a target="_blank" href="%s">%s</a>! %s <b>%s</b></p><a href="%s">%s</a></div>', esc_html__('Get a 10% exclusive discount on the premium version of the', 'woocommerce-image-zoom'), 'https://wpbean.com/downloads/woocommerce-image-zoom-pro/', esc_html__('Product Image Zoom for WooCommerce', 'woocommerce-image-zoom'), esc_html__('Use discount code - ', 'woocommerce-image-zoom'), 'NewCustomer', esc_url(add_query_arg('wpb-wiz-pro-discount-admin-notice-dismissed', 'true')), esc_html__('Dismiss', 'woocommerce-image-zoom'));
 	}
 }
-
 
 function wpb_wiz_pro_discount_admin_notice_dismissed()
 {
 	$user_id = get_current_user_id();
-	if (isset($_GET['wpb-wiz-pro-discount-admin-notice-dismissed'])) {
+	if (isset($_GET['wpb-wiz-pro-discount-admin-notice-dismissed'])) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		add_user_meta($user_id, 'wpb_wiz_pro_discount_dismissed', 'true', true);
 	}
 }
@@ -147,7 +129,6 @@ function wpb_wiz_pro_discount_admin_notice_dismissed()
 /**
  * Plugin Deactivation
  */
-
 function wpb_wiz_lite_plugin_deactivation()
 {
 	$user_id = get_current_user_id();
@@ -156,14 +137,11 @@ function wpb_wiz_lite_plugin_deactivation()
 	}
 }
 
-
 /**
  * Plugin Init
  */
-
 function wpb_wiz_free_init()
 {
-	load_plugin_textdomain('woocommerce-image-zoom', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 	register_deactivation_hook(plugin_basename(__FILE__), 'wpb_wiz_lite_plugin_deactivation');
 	add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'wpb_wiz_free_plugin_actions_links');
 	add_action('admin_notices', 'wpb_wiz_pro_discount_admin_notice');
@@ -183,23 +161,8 @@ function wpb_wiz_free_init()
 		require_once dirname(__FILE__) . '/inc/wpb-wiz-filter.php';
 		require_once dirname(__FILE__) . '/admin/class.settings-api.php';
 		require_once dirname(__FILE__) . '/admin/plugin-settings.php';
-
-		if (!class_exists('WpBean_WC_Zoom_AvailableHire')) {
-			include_once __DIR__ . '/inc/AvailableHire/AvailableHire.php';
-		}
-		new WpBean_WC_Zoom_AvailableHire();
 	} else {
 		add_action('admin_notices', 'wpb_wiz_free_admin_notice');
 	}
 }
 add_action('plugins_loaded', 'wpb_wiz_free_init');
-
-
-/**
- * jQuery Migrate Helper
- */
-
-if (! class_exists('jQuery_Migrate_Helper')) {
-	include_once __DIR__ . '/inc/jquery-migrate-helper/class-jquery-migrate-helper.php';
-	add_action('plugins_loaded', array('jQuery_Migrate_Helper', 'init_actions'));
-}
