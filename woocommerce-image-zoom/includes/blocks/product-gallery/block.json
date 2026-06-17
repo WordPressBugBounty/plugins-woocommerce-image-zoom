@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpbean-pgs/product-gallery",
+  "version": "1.0.0",
+  "title": "WPBean Product Gallery",
+  "category": "woocommerce",
+  "description": "Displays the WPBean Product Gallery for WooCommerce on any page or template. Use the WPBean Gallery Rules page to configure gallery settings.",
+  "keywords": [
+    "zoom",
+    "gallery",
+    "product",
+    "woocommerce",
+    "wpbean"
+  ],
+  "textdomain": "wpbean-product-gallery-slider-for-woocommerce",
+  "icon": "format-gallery",
+  "supports": {
+    "html": false,
+    "multiple": false,
+    "reusable": false,
+    "color": false,
+    "spacing": false,
+    "typography": false,
+    "lock": false
+  },
+  "attributes": {
+    "productId": {
+      "type": "integer",
+      "default": 0
+    }
+  },
+  "usesContext": [
+    "postType",
+    "postId"
+  ],
+  "editorScript": "file:./index.js"
+}

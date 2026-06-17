@@ -1,0 +1,978 @@
+/* ── WPBean PGS — Product Video Metabox v2 ──────────────────────────────── */
+
+/* ── Attachment-panel Gallery Video field ────────────────────────────────── */
+/*
+ * The combined URL-input + upload-button row rendered by WPBean_PGS_Attachment_Video.
+ * Matches the alignment and feel of core WP attachment compat fields (title,
+ * caption, alt-text) so the field blends naturally into the media sidebar.
+ */
+
+/* Wrapper: positions the upload button absolutely over the right edge of the input */
+.wcpg-att-field {
+    position: relative;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Text input: full width with right padding so text never slides under the button */
+.wcpg-att-vid-url {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding-right: 30px !important;
+    box-sizing: border-box !important;
+}
+
+/* Overlapping upload button */
+.wcpg-att-vid-pick {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #787c82;
+    padding: 4px;
+    line-height: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        color 0.15s,
+        background 0.15s;
+}
+
+.wcpg-att-vid-pick:hover,
+.wcpg-att-vid-pick:focus {
+    color: #2271b1;
+    background: rgba(34, 113, 177, 0.08);
+    outline: none;
+}
+
+.wcpg-att-vid-pick svg {
+    pointer-events: none;
+}
+
+/* "Remove video" link below the field */
+.wcpg-att-vid-remove {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    color: #a00;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.4;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.wcpg-att-vid-remove:hover {
+    color: #600;
+    text-decoration: underline;
+}
+
+/* Description text below the field */
+.wcpg-att-description {
+    margin: 5px 0 0 !important;
+    padding: 0 !important;
+    font-size: 11px !important;
+    color: #787c82 !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+}
+
+/*
+ * Narrow-sidebar fix: when the wp.media attachment details panel is at
+ * its minimum width (~250 px), ensure the row's <td> doesn't overflow.
+ */
+.compat-field-wcpg_image_video_url td.field {
+    word-break: break-word;
+    overflow: hidden;
+}
+
+/* ── Attachment panel — Pro upgrade notice ───────────────────────────────── */
+
+.wcpg-att-upgrade {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.wcpg-att-upgrade-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #7c3aed;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    line-height: 1.6;
+    width: fit-content;
+}
+
+.wcpg-att-upgrade-badge svg {
+    flex-shrink: 0;
+}
+
+.wcpg-att-upgrade-msg {
+    font-size: 11px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.wcpg-att-upgrade-btn {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #7c3aed;
+    color: #fff !important;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none !important;
+    transition: background 0.15s;
+    width: fit-content;
+}
+
+.wcpg-att-upgrade-btn:hover,
+.wcpg-att-upgrade-btn:focus {
+    background: #6d28d9 !important;
+    color: #fff !important;
+    outline: none;
+}
+
+/* On narrow screens (<= 600px) the compat table rows go full-width.
+   Make sure our wrapper still fills the available space correctly. */
+@media screen and (max-width: 600px) {
+    .compat-field-wcpg_image_video_url th.label,
+    .compat-field-wcpg_image_video_url td.field {
+        display: block;
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .wcpg-att-field {
+        margin-top: 4px;
+    }
+}
+
+/* ── Product gallery image edit buttons ──────────────────────────────────── */
+/*
+ * "Edit / set video" icon button overlaid on each product gallery thumbnail.
+ *
+ * WooCommerce sets overflow:hidden on both the <ul> and <li>, so we force
+ * overflow:visible on the whole chain and keep the button strictly inside the
+ * image bounds so the sortable behaviour is unaffected.
+ */
+
+/* Allow the button to show above the image without being clipped */
+#product_images_container,
+#product_images_container ul.product_images,
+#product_images_container .product_image_container {
+    overflow: visible !important;
+}
+
+/* The <li> must be a stacking/position context */
+#product_images_container .product_image_container {
+    position: relative !important;
+}
+
+/* Edit button overlay — sits in the bottom-right corner of the thumbnail */
+.wcpg-gal-edit-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+    width: 22px;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.58);
+    color: #fff;
+    border: none;
+    border-top-left-radius: 4px;
+    cursor: pointer;
+    /* Visible but subtle at rest; fully opaque on container hover */
+    opacity: 0.55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    line-height: 0;
+    transition:
+        opacity 0.15s,
+        background 0.15s;
+    box-shadow: none;
+}
+
+.wcpg-gal-edit-btn svg {
+    width: 13px;
+    height: 13px;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+/* Full opacity when hovering the thumbnail */
+#product_images_container .product_image_container:hover .wcpg-gal-edit-btn {
+    opacity: 1;
+}
+
+/* Blue on direct hover/focus of the button itself */
+.wcpg-gal-edit-btn:hover,
+.wcpg-gal-edit-btn:focus {
+    background: #2271b1;
+    opacity: 1;
+    outline: none;
+}
+
+/* Video badge — small play-circle in the top-left corner */
+.wcpg-gal-has-video .wcpg-gal-edit-btn {
+    /* Tint the edit button blue to indicate video is set */
+    background: rgba(34, 113, 177, 0.75);
+    opacity: 1;
+}
+
+.wcpg-gal-has-video .wcpg-gal-edit-btn:hover {
+    background: #1d5e99;
+}
+
+#wcpg-video-list {
+    margin-bottom: 8px;
+}
+
+/* ── Accordion Item ── */
+.wcpg-video-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 7px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    /* Pre-promote to GPU layer so overflow+border-radius clipping is preserved
+       when transform is applied during drag (Chrome/Safari compositing fix) */
+    will-change: transform;
+    transition:
+        box-shadow 0.18s ease,
+        border-color 0.18s ease,
+        opacity 0.18s ease,
+        transform 0.18s ease;
+}
+
+.wcpg-video-item.wcpg-dragging {
+    opacity: 0.45;
+    transform: scale(0.983);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-color: #c4c9d1;
+    cursor: grabbing;
+}
+
+/* ── Drop position indicator — ghost placeholder ── */
+.wcpg-drop-indicator {
+    height: 48px;
+    background: #fff;
+    border: 2px dotted #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 7px;
+    position: relative;
+    pointer-events: none;
+    box-sizing: border-box;
+    transform-origin: top center;
+    animation: wcpgDropIn 0.16s ease both;
+}
+
+@keyframes wcpgDropIn {
+    from {
+        opacity: 0;
+        transform: scaleY(0.65);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* ── Settle animation after a drop ── */
+@keyframes wcpgItemDrop {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.97) translateY(-5px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.008) translateY(1px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.wcpg-video-item.wcpg-item-dropped {
+    animation: wcpgItemDrop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* ── Accordion Header ── */
+.wcpg-item-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 10px;
+    cursor: pointer;
+    user-select: none;
+    background: #f9fafb;
+    border-bottom: 1px solid transparent;
+    transition:
+        background 0.12s ease,
+        border-color 0.12s ease;
+    -webkit-user-select: none;
+}
+
+.wcpg-video-item.wcpg-item-open > .wcpg-item-header {
+    border-bottom-color: #e5e7eb;
+    background: #f3f4f6;
+}
+
+.wcpg-item-header:hover {
+    background: #f0f1f3;
+}
+
+/* Drag handle */
+.wcpg-drag-handle {
+    color: #c4c9d1;
+    cursor: grab;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 2px 1px;
+    border-radius: 3px;
+    transition: color 0.1s;
+    line-height: 0;
+}
+
+.wcpg-drag-handle:hover {
+    color: #6b7280;
+}
+
+.wcpg-drag-handle:active {
+    cursor: grabbing;
+}
+
+/* Header thumbnail */
+.wcpg-header-thumb {
+    width: 44px;
+    height: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #e5e7eb;
+    background: #f3f4f6;
+    line-height: 0;
+}
+
+.wcpg-header-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.wcpg-header-thumb-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #1e1e2e 0%, #2a2a3e 100%);
+}
+
+.wcpg-header-thumb-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Header text info */
+.wcpg-header-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.wcpg-type-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    width: fit-content;
+    line-height: 1.6;
+}
+
+.wcpg-type-youtube {
+    background: #fee2e2;
+    color: #991b1b;
+}
+.wcpg-type-vimeo {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+.wcpg-type-upload {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+.wcpg-header-title {
+    font-size: 11.5px;
+    color: #374151;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+}
+
+.wcpg-header-title-empty {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+/* Header action buttons */
+.wcpg-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    flex-shrink: 0;
+}
+
+.wcpg-btn-icon {
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    padding: 0;
+    transition:
+        background 0.12s,
+        color 0.12s;
+    box-shadow: none;
+}
+
+.wcpg-btn-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.wcpg-btn-icon svg {
+    width: 13px;
+    height: 13px;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.wcpg-btn-icon:hover {
+    background: #e9eaeb;
+    color: #374151;
+}
+
+.wcpg-delete-btn:hover {
+    background: #fee2e2 !important;
+    color: #dc2626 !important;
+}
+
+.wcpg-duplicate-btn:hover {
+    background: #dbeafe !important;
+    color: #2563eb !important;
+}
+
+.wcpg-chevron {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wcpg-video-item.wcpg-item-open .wcpg-chevron {
+    transform: rotate(180deg);
+}
+
+/* ── Accordion Body ── */
+.wcpg-item-body {
+    display: none;
+    padding: 13px 13px 6px;
+}
+
+.wcpg-video-item.wcpg-item-open > .wcpg-item-body {
+    display: block;
+}
+
+/* Field rows */
+.wcpg-field-row {
+    margin-bottom: 11px;
+}
+
+.wcpg-field-row > label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.wcpg-field-optional {
+    font-weight: 400;
+    color: #9ca3af;
+    font-size: 10.5px;
+}
+
+.wcpg-field-row select,
+.wcpg-field-row input[type="text"] {
+    width: 100%;
+    height: 31px;
+    font-size: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 0 8px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    color: #1f2937;
+    background: #fff;
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+.wcpg-field-row select {
+    padding: 0 6px;
+    cursor: pointer;
+}
+
+.wcpg-field-row select:focus,
+.wcpg-field-row input[type="text"]:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 2px rgba(34, 113, 177, 0.18);
+    outline: none;
+}
+
+/* Upload / choose video button */
+.wcpg-choose-video {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    height: 31px;
+    background: #fff;
+    border: 1.5px dashed #d1d5db;
+    border-radius: 6px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #4b5563;
+    transition:
+        border-color 0.15s,
+        background 0.15s,
+        color 0.15s;
+    box-sizing: border-box;
+    font-family: inherit;
+    box-shadow: none;
+}
+
+.wcpg-choose-video:hover,
+.wcpg-choose-video:focus {
+    border-color: #2271b1;
+    color: #2271b1;
+    background: #f0f6fc;
+    outline: none;
+    box-shadow: none;
+}
+
+.wcpg-choose-video svg {
+    flex-shrink: 0;
+    color: currentColor;
+    stroke: currentColor;
+}
+
+.wcpg-choose-video span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+/* Thumbnail section */
+.wcpg-thumb-inner {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.wcpg-thumb-preview {
+    width: 68px;
+    height: 46px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f9fafb;
+    line-height: 0;
+}
+
+.wcpg-thumb-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.wcpg-thumb-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wcpg-thumb-empty svg {
+    width: 18px;
+    height: 18px;
+    color: #d1d5db;
+    stroke: #d1d5db;
+}
+
+.wcpg-thumb-actions {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 1px;
+}
+
+/* Secondary button */
+.wcpg-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 27px;
+    padding: 0 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background: #fff;
+    color: #374151;
+    font-size: 11.5px;
+    cursor: pointer;
+    transition:
+        border-color 0.12s,
+        background 0.12s,
+        color 0.12s;
+    width: 100%;
+    font-family: inherit;
+    box-shadow: none;
+}
+
+.wcpg-btn-secondary svg {
+    flex-shrink: 0;
+    color: currentColor;
+    stroke: currentColor;
+}
+
+.wcpg-btn-secondary:hover,
+.wcpg-btn-secondary:focus {
+    border-color: #2271b1;
+    color: #2271b1;
+    background: #f0f6fc;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Danger ghost button */
+.wcpg-btn-danger-ghost {
+    border: none;
+    background: none;
+    color: #ef4444;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 1px 0;
+    text-align: center;
+    transition: color 0.12s;
+    width: 100%;
+    font-family: inherit;
+    box-shadow: none;
+}
+
+.wcpg-btn-danger-ghost:hover,
+.wcpg-btn-danger-ghost:focus {
+    color: #991b1b;
+    outline: none;
+    box-shadow: none;
+}
+
+/* ── Add Video Button ── */
+#wcpg-add-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    height: 34px;
+    background: #fff;
+    border: 1.5px dashed #d1d5db;
+    border-radius: 8px;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        border-color 0.15s,
+        color 0.15s,
+        background 0.15s;
+    margin-top: 2px;
+    font-family: inherit;
+    box-shadow: none;
+}
+
+#wcpg-add-video:hover,
+#wcpg-add-video:focus {
+    border-color: #2271b1;
+    color: #2271b1;
+    background: #f0f6fc;
+    outline: none;
+    box-shadow: none;
+}
+
+#wcpg-add-video svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    stroke: currentColor;
+}
+
+/* ── Pro Limit Notice ── */
+.wcpg-pro-limit-notice {
+    background: linear-gradient(135deg, #f5f3ff 0%, #fdf4ff 100%);
+    border: 1px solid #e9d5ff;
+    border-radius: 8px;
+    padding: 11px 12px 12px;
+    margin-bottom: 8px;
+}
+
+.wcpg-pro-notice-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.wcpg-pro-notice-icon {
+    width: 26px;
+    height: 26px;
+    background: #7c3aed;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+    line-height: 0;
+}
+
+.wcpg-pro-notice-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #4c1d95;
+    line-height: 1.3;
+}
+
+.wcpg-pro-notice-desc {
+    font-size: 11px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.wcpg-pro-notice-btn {
+    display: block;
+    text-align: center;
+    padding: 6px 0;
+    background: #7c3aed;
+    color: #fff !important;
+    font-size: 11.5px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: background 0.15s;
+}
+
+.wcpg-pro-notice-btn:hover,
+.wcpg-pro-notice-btn:focus {
+    background: #6d28d9 !important;
+    color: #fff !important;
+    outline: none;
+    box-shadow: none;
+}
+
+@keyframes wcpgProNoticePulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.018);
+    }
+    65% {
+        transform: scale(0.994);
+    }
+}
+
+.wcpg-pro-limit-notice.wcpg-pro-notice-pulse {
+    animation: wcpgProNoticePulse 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Confirm Modal ── */
+.wcpg-confirm-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    align-items: center;
+    justify-content: center;
+}
+
+.wcpg-confirm-modal.wcpg-confirm-active {
+    display: flex;
+}
+
+.wcpg-confirm-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.48);
+}
+
+.wcpg-confirm-dialog {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px 20px 18px;
+    width: 268px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.28),
+        0 4px 16px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+    animation: wcpgConfirmIn 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes wcpgConfirmIn {
+    from {
+        opacity: 0;
+        transform: scale(0.88) translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.wcpg-confirm-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.wcpg-confirm-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+}
+
+.wcpg-confirm-icon-danger {
+    background: #fee2e2;
+    color: #dc2626;
+}
+.wcpg-confirm-icon-info {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.wcpg-confirm-title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 5px;
+}
+
+.wcpg-confirm-message {
+    text-align: center;
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0 0 18px;
+    line-height: 1.55;
+}
+
+.wcpg-confirm-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.wcpg-confirm-cancel,
+.wcpg-confirm-ok {
+    flex: 1;
+    height: 34px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background 0.12s,
+        transform 0.1s;
+    font-family: inherit;
+    border: none;
+}
+
+.wcpg-confirm-cancel {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+}
+
+.wcpg-confirm-cancel:hover {
+    background: #e9eaeb;
+}
+
+.wcpg-confirm-ok {
+    background: #dc2626;
+    color: #fff;
+}
+
+.wcpg-confirm-ok:hover {
+    background: #b91c1c;
+}
+.wcpg-confirm-ok:active {
+    transform: scale(0.97);
+}
+
+.wcpg-confirm-ok.wcpg-confirm-ok-blue {
+    background: #2271b1;
+}
+.wcpg-confirm-ok.wcpg-confirm-ok-blue:hover {
+    background: #1d5e99;
+}

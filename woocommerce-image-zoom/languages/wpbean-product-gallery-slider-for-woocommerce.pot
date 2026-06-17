@@ -1,0 +1,3009 @@
+# Copyright (C) 2026 WPBean
+# This file is distributed under the GPL v2 or later.
+# https://www.gnu.org/licenses/gpl-2.0.html
+msgid ""
+msgstr ""
+"Project-Id-Version: WPBean Product Gallery Slider for WooCommerce 3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpbean-product-gallery-slider-for-woocommerce\n"
+"POT-Creation-Date: 2026-05-28T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WPBean\n"
+"X-Domain: wpbean-product-gallery-slider-for-woocommerce\n"
+
+#: wpbean-product-gallery-slider-for-woocommerce.php
+msgid "WPBean Product Gallery Slider for WooCommerce"
+msgstr ""
+
+#: wpbean-product-gallery-slider-for-woocommerce.php
+msgid " required "
+msgstr ""
+
+#: wpbean-product-gallery-slider-for-woocommerce.php
+msgid "WooCommerce"
+msgstr ""
+
+#: wpbean-product-gallery-slider-for-woocommerce.php
+msgid " plugin to work with."
+msgstr ""
+
+#: wpbean-product-gallery-slider-for-woocommerce.php
+msgid "Settings"
+msgstr ""
+
+#: wpbean-product-gallery-slider-for-woocommerce.php
+msgid "Documentation"
+msgstr ""
+
+#: wpbean-product-gallery-slider-for-woocommerce.php
+msgid "Support"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Product Gallery"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Rules"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Product Gallery Rules"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Product Gallery Rule"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Import &amp; Export"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Import &amp; Export Product Gallery Rules"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "WPBean Product Gallery for WooCommerce"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "WPBean Product Gallery"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "To manage gallery rules go to: Dashboard → Product Gallery → Rules."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Permission denied."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#. Block (FSE) theme compatibility notices
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Block (FSE) Theme + Single Product Block Template Detected"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Block (FSE) Theme Detected — Verify Gallery Compatibility"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Your active theme is a <strong>block-based (FSE) theme</strong>. WooCommerce Blocks automatically provides a block template for the single product page, which can bypass the classic <code>%s</code> hook that our gallery relies on."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Your active theme uses the <strong>Full Site Editor (FSE)</strong> and a block-based <em>Single Product</em> template is active. WooCommerce serves this template directly, bypassing the classic <code>%s</code> hook — so the plugin's gallery may be invisible or may appear alongside the default WooCommerce gallery."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "If the gallery is missing or doubled, go to <strong>Appearance → Editor → Templates → WooCommerce → Single Product</strong>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Go to <strong>Appearance → Editor → Templates → WooCommerce</strong>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Open the <strong>Single Product</strong> template."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Remove the default <strong>Product Gallery</strong> block and add the <strong>WPBean Zoom Gallery</strong> block in its place."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Add the <strong>WPBean Zoom Gallery</strong> block in its place."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Save the template."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Visit a product page on your site and confirm the zoom gallery is displaying correctly."
+msgstr ""
+
+#. Page builder compatibility notices
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Elementor Pro Theme Builder: Single Product Template Detected"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "<strong>Elementor Pro Theme Builder</strong> is controlling the single product layout. This overrides WooCommerce's template system, so our gallery hook is bypassed and the gallery will not appear."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "In your WordPress admin, go to <strong>Templates → Theme Builder</strong>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Open the template assigned to single product pages."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Remove the default <strong>WooCommerce Product Image</strong> widget."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Add the <strong>WPBean Zoom Gallery</strong> widget (available in the WPBean widget section) in its place."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Save and publish the template."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Divi Theme Builder: Product Template Detected"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "The <strong>Divi Theme Builder</strong> has a template assigned to single product pages. This replaces WooCommerce's default template and prevents our gallery from rendering via the standard hook."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Go to <strong>Divi → Theme Builder</strong>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Open your <strong>Single Product</strong> template."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Remove the default product image module."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Add a <strong>Shortcode</strong> element and enter <code>[wpbean_product_gallery]</code>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Save and publish the layout."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Beaver Builder Themer: Product Layout Detected"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "<strong>Beaver Builder Themer</strong> has a layout assigned to single product pages. Because Themer renders the entire page, WooCommerce's classic product gallery hook is bypassed."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Go to <strong>Beaver Builder → Themer Layouts</strong>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Edit the layout assigned to product pages."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Remove the WooCommerce product image module."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Add a HTML module containing <code>[wpbean_product_gallery] shortcode.</code>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Oxygen Builder: Product Template Detected"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "<strong>Oxygen Builder</strong> has a template assigned to single product pages. Oxygen renders pages independently of WordPress's template loop, so WooCommerce's gallery hook does not fire."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Go to <strong>Oxygen → Templates</strong> and open your product page template."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Remove the WooCommerce Product Gallery element."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Add a <strong>Shortcode</strong> element with <code>[wpbean_product_gallery]</code>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Bricks Builder: Product Template Detected"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "<strong>Bricks Builder</strong> has a template assigned to single product pages. Bricks renders outside WooCommerce's standard hook system, preventing our gallery from loading automatically."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Go to <strong>Bricks → Templates</strong>."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Edit the template assigned to single product pages."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Remove the WooCommerce product image element."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Add a <strong>Code</strong> module with the shortcode <code>[wpbean_product_gallery]</code>."
+msgstr ""
+
+#. Gutenberg block
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Product Gallery"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Product: %s"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Leave empty to display the current product's gallery on a single product page."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "— Current Product —"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Displays the current product's gallery on single product pages. Select a product above to pin it to a specific product."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "How to fix:"
+msgstr ""
+
+#. Variation Gallery
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Variation Gallery"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Extra images for this variation. Drag to reorder."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Add Gallery Images"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Edit Gallery"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Remove all images"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Set Thumbnail"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Drag to reorder"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Add to Gallery"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Remove All"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Remove All Images"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "All gallery images for this variation will be removed. This cannot be undone."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Select Gallery Images"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Update Gallery"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-variation-gallery.php
+msgid "Remove image"
+msgstr ""
+
+#. Video Meta
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Product Gallery Videos"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "New Video"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Title"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Type"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "URL"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "File"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "optional"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "YouTube"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Vimeo"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Video File (Upload)"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Paste YouTube or Vimeo URL…"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Video title…"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Upload Video File…"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Select video file from media library"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Add Video"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "+ Add Video"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Paste a YouTube / Vimeo URL, or click the upload icon to select a video file."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Remove video"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Choose Thumbnail"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Choose Video File"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Use this image"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Use this video"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Gallery Video"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Duplicate"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Toggle"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-video-meta.php
+msgid "Invalid file type. Only .json files are accepted."
+msgstr ""
+
+#. Import / Export
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Import &amp; Export Product Gallery Rules"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Migrate your gallery setting rules between sites using JSON files."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Export Rules"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Download all your setting rules as a JSON backup file."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Export All Rules"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Rule names, status &amp; apply-to setting"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "All gallery &amp; lightbox configuration"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Product &amp; category assignment IDs"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "No setting rules found. Create your first rule before exporting."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Import Rules"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Upload a JSON file exported from any WPBean Product Gallery site."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Drop your JSON file here"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "or"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Browse File"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Accepted: .json &nbsp;·&nbsp; Max size: 5 MB"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Upload zone: drop a JSON file here or press Enter to browse"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Import Options"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "If a rule with the same name already exists:"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Skip — do not import if title already exists"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Create a new rule anyway"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Import product &amp; category assignments"
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Assignment IDs are site-specific — review them after importing on a different site."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Please select a JSON file first."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Product and category IDs are site-specific. Assignments may need updating if importing to a different site."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Import &amp; Export"
+msgstr ""
+
+#. Import notices
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Could not read the uploaded file."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "File is too large. Maximum allowed size is 5 MB."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "File upload verification failed. Please try again."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Invalid file type. Only .json files are accepted."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Invalid import file. Please upload a JSON file exported by this plugin."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "The file does not contain valid JSON."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Server error: failed to write the uploaded file to disk."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "The file upload was blocked by a server extension."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "The file exceeds the maximum upload size allowed by the form."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "The file exceeds the server upload size limit."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "No file was selected for upload."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "Server error: missing temporary upload directory."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "The file was only partially uploaded. Please try again."
+msgstr ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "An unknown upload error occurred. Please try again."
+msgstr ""
+
+#. REST API errors
+#: includes/admin/rest/class-rest-settings-controller.php
+msgid "No fields to update."
+msgstr ""
+
+#: includes/admin/rest/class-rest-settings-controller.php
+msgid "Setting not found"
+msgstr ""
+
+#: includes/admin/rest/class-rest-settings-controller.php
+msgid "Setting is not in trash."
+msgstr ""
+
+#. Plural strings
+#: includes/admin/class-wc-gallery-admin.php
+msgid "%d rule imported"
+msgid_plural "%d rules imported"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "setting rule ready to export"
+msgid_plural "setting rules ready to export"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "%d entry could not be imported"
+msgid_plural "%d entries could not be imported"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-wc-gallery-admin.php
+msgid "%d skipped (duplicate title)"
+msgid_plural "%d skipped (duplicate titles)"
+msgstr[0] ""
+msgstr[1] ""
+
+#. JS / React admin app strings (src/admin/)
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Activate zoom when the cursor hovers over the main image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Activation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Active Dot Color"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Active Thumbnail"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Adaptive"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/CrudApp.jsx
+msgid "Add New"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Alignment"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/TableBody.jsx
+msgid "All Products"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/CrudApp.jsx
+msgid "All Status"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "All images in an equal-sized grid with a Show More / Show Less button to control how many are visible."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "All images stacked vertically in a single full-width column."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "All product images are displayed as equal-sized tiles in a grid. A Show More / Show Less button controls how many tiles are visible at once."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Allow product images to be opened in a full-screen lightbox."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Allow scrolling the mouse wheel to zoom in and out on the lightbox image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Allow the slider to wrap around from the last thumbnail back to the first, and vice versa. The wrap-around uses a distinct fade animation."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Allow users to pinch to zoom the main image on mobile and tablet devices."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Allow zoom to activate immediately without waiting for the image to finish loading. Off by default — disabling the wait ensures zoom window sizing is always accurate."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Also open the lightbox when clicking the main product image directly."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Anchor Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Animate the lightbox opening and closing by zooming from/to the source image position."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Animation style when navigating between images."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Animation when switching between gallery images."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Animation"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/TableBody.jsx
+msgid "Applies To"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Apply Layout"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Apply Rule To"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Apply a gallery layout preset to get started in seconds."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Apply a smooth follow-through to zoom position updates."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Apply a soft box shadow around the zoom window."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Apply a soft shadow around the main image area."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Apply sticky positioning to the product summary alongside the gallery."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Apply this rule directly to individual products."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Apply this rule to all products in the selected categories."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Apply this rule to specific products or categories."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Apply"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Arrows, pagination, and lightbox button controls for the main product image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Aspect Ratio"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Assignments"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Auto accurately represents the visible zoom area. Custom lets you set any fixed size."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Auto fits the available space while preserving image aspect ratio. Match Image mirrors the main image exactly. Custom uses your defined dimensions."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Auto"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Auto-advance through images automatically."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Auto-hide Arrows"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Auto-hide Expand Button"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Auto-hide"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Automatically advance to the next image at a set interval."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Automatically start playing the embed when navigated to. Most browsers require the video to also be muted for autoplay to work."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Automatically start playing the hosted video when navigated to. For silent autoplay, enable Muted as well."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Automatically swap the main image and add a gallery entry when a product variation with its own image is selected."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Autoplay Button"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Autoplay"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Back to all rules"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Back up your current setup first"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Background Color"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Background shown behind the image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Background"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Below this breakpoint, Anchor Navigation and Sticky Split galleries collapse to a standard carousel. The Thumbnail Gallery applies mobile-specific arrow, pagination, and thumbnail settings instead."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Border Color"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Border Radius"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Border Width"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Border color shown on the active thumbnail."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Bottom"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/controls/BulkActions.jsx
+msgid "Bulk Actions"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Buttons shown in the lightbox toolbar."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "CSS display height of each thumbnail. Does not affect the image file loaded."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "CSS display width of each thumbnail. Does not affect the image file loaded."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Center"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Choose how the magnified image is displayed."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Choose the overall gallery layout. Thumbnail Gallery shows images alongside a strip of clickable thumbnails. Anchor Navigation stacks all images vertically with dot navigation. Sticky Split shows a sticky main viewer alongside a vertically scrollable column of full-size images."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Choose whether this zoom rule applies to all products or only specific ones."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Choose which WordPress-registered image size is loaded for thumbnail items."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Choose which WordPress-registered image size is served for the main product image. Larger sizes are sharper but slower."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Circle"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Classic Slider"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/CrudApp.jsx
+msgid "Clear search"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Clear"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Click Action"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Click Sync"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/ShortcutsModal.jsx
+msgid "Click a shortcut badge to reassign it"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Click"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Click-and-drag or touch-drag to scroll through thumbnails."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Close navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Close on Overlay Click"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Close the lightbox when clicking the dark background overlay."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Collapse"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Color of the currently active pagination dot."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Color of the inactive pagination dots."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Color of the lens border ring."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Color of the selection box border."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Column Gap"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Columns"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Configure gallery thumbnail position and layout."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Configure the hierarchy grid below the hero image. The first gallery image is always displayed full-width; remaining images fill a multi-column grid."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Configure the two-column sticky split layout. The sticky column holds the main image viewer; the scroll column shows all images full-size."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ConfirmModal.jsx
+msgid "Confirm"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Contain"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Control how images inside the grid cells are sized and fitted."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Control how product variation images interact with the gallery."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Control image loading behavior."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Control the main product image display area."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Control when zoom is triggered."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/TableHeader.jsx
+msgid "Count"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Cover"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Crosshair"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Cursor Overlay"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Cursor Style"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Custom"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Customise the Anchor Navigation (stacked) gallery layout and its dot pagination."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Customize the zoom lens overlay."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/TableHeader.jsx
+msgid "Date Created"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Default"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "Delete Permanently"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ConfirmModal.jsx
+msgid "Delete permanently?"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Diameter of each pagination dot."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Diameter or width of the circular/square lens in pixels."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Dimensions of the floating zoom panel."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Direction images slide when navigating between gallery items."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Display Mode"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Display a button at the bottom that reveals tiles beyond the initial count."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Display a fullscreen icon button on the main image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Display a loading indicator while images are being fetched."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Display a selection box on the image while zooming."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Display as thumbnail images or simple dot indicators."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Display caption text below each scroll item."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Display the player controls bar inside the YouTube / Vimeo embed (play, pause, volume, fullscreen)."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Display the thumbnail strip alongside the main product image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Display"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Distance from the top of the viewport when the main viewer is in sticky position."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Distance from the top of the viewport when the thumbnail strip is sticky (left/right positions only)."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Dot Color"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Dot Gap"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Dot Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Dot Pagination"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Dot Position"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Dot Size"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Dot"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Dots are clickable indicators. Progress Bar shows a thin fill line that advances with each image. Count shows a numeric counter (e.g. 2 / 8) with arrow buttons to navigate."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Dots"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Download Image"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/StatusBadge.jsx
+msgid "Draft"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Drag Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Drag or swipe the lightbox image to navigate between images. Works on desktop (mouse drag) and mobile (touch swipe)."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Drag or swipe the main image to navigate between gallery items. Works on both desktop (mouse drag) and mobile (touch swipe). Only available when Zoom on Hover and Touch Zoom are both disabled."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Drop Shadow"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ConfirmModal.jsx
+msgid "Duplicate form?"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ConfirmModal.jsx
+msgid "Duplicate rule?"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Duration"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Easing Amount"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Easing lag factor. Higher values produce a slower, more fluid follow."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Easing"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "Edit"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Effect"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Embed Playback"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Enable Autoplay"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Enable Easing"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Enable Fade"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Enable Lightbox"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Enable Spinner"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Enable Touch Zoom"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Enable zoom when hovering over each image in the grid. Requires Zoom on Hover to be enabled in the Zoom tab."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Enable zoom when hovering over each image in the stacked gallery. Requires Zoom on Hover to be enabled in the Zoom tab."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Enable zoom when hovering over each tile. Requires Zoom on Hover to be enabled in the Zoom tab."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Enable zoom when hovering over images in the scroll column. Uses the same zoom type configured for the main viewer."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Enable"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "End"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Entrance Animation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Expand"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Explicit height for the main image area in pixels."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Extra space between the image edge and the window."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Extra vertical space between the image edge and the window."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Fade Duration"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Fade Easing"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Fade the zoom window in and out instead of snapping."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Fade"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Fill color inside the selection box. Use a semi-transparent color."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Filter categories…"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Fit to Container"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Fit to Main Image"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Fixed Height"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Fixed height of the cursor selection box."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Fixed width of the cursor selection box."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Fixed"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Floating window size, position and border style."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "For YouTube: hide suggested videos shown after the video ends (sets rel=0)."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Full (original)"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Full-screen image viewer overlay and controls."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Full-screen image viewer overlay."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Full-width image slider with no thumbnails — clean arrows and dot pagination only."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Fullscreen"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Gallery & Thumbnails"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Gallery Type"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Gallery on the left, large sticky image in the centre, and product info pinned on the right."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Gallery"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Gap"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "General Settings"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "General"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/EmptyState.jsx
+msgid "Get started by creating your first setting rule."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Global video behaviour settings."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Go to the"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Grid Columns"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Grid Item Style"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Grid Layout"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Grid Options"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Grid Thumbnails"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Grid of thumbnails below the main image — great for products with many images."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Grid"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Height Mode"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Height of each thumbnail item on mobile. Set to 0 to use the desktop thumbnail height."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Height of the zoom window in pixels."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Height"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Hide Related Videos"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Hide arrows when the cursor leaves the image. Turn off to keep them always visible."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Hide the lightbox expand button when the cursor leaves the image. Turn off to keep it always visible."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Hide the pagination when the cursor leaves the image. Turn off to keep it always visible."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Hierarchy Grid"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Highlight Color"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Highlight Width"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Horizontal Offset"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Horizontal thumbnails below the main image with a smooth slide transition."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Horizontal"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Hosted Video"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Hover zoom for individual images in the hierarchy grid. Uses the zoom type and settings from the Zoom tab."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Hover zoom for individual tiles. Uses the zoom type and settings from the Zoom tab."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Hover zoom for the stacked images. Uses the zoom type and settings from the Zoom tab."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Hover"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "How and when the lightbox is triggered."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "How hovering or clicking a thumbnail swaps the main image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "How images fill the grid item area when an aspect ratio is enforced."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "How images fill the scroll item area when an aspect ratio is enforced."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "How images fill the tile area when an aspect ratio is enforced."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "How long the fade takes. Higher values are slower."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "How long the transition animation takes."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "How the image fills the display area."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "How thumbnails are arranged."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "How to Add Videos"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/TableHeader.jsx
+msgid "ID"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "If a product matches multiple rules, the rule with the highest ID (most recently created) will be applied."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "If your current gallery configuration is important, save this rule and use Duplicate (⋯ menu) to create a backup copy before applying. You can undo with Ctrl+Z before saving, but changes are permanent once saved."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Image Caption"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Image Counter"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Image File Size"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Image Fit"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Image Radius"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Image Tools"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Image Transition"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Image Zoom"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Image size used for the main product image display."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Image size used for the thumbnail strip items."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Initial Count"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Inner"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Item Border Radius"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Item Gap"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Keep the product summary (title, price, add-to-cart) fixed in the viewport while scrolling. Designed for wide-screen layouts where the gallery and summary sit side by side."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Keyboard Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SearchPalette.jsx
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Label on the button that collapses tiles back to the initial count."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Label on the button that reveals hidden tiles."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Large (1024px)"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Layout"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Left Thumbnails"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Left"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Length of the open/close and navigation animations."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Lens Appearance"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Lens Shape"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Lens Size"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Lens overlays the image, Window shows a separate panel, Inner zooms inside the image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Lens"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Lightbox"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Limit the initial number of visible tiles and let visitors reveal the rest with a button."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Loading Spinner"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Loading assignments…"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Lock freezes the height after the first item loads — prevents layout shift. Adaptive grows the container to fit the tallest item seen, never shrinking. Fixed sets an explicit pixel height."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Lock"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Loop Images"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Loop back to the first image after reaching the last."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Loop"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Magnification multiplier applied to the full-size image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Main Column Width"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Main Image Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Main Image"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Main Side"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/CrudApp.jsx
+msgid "Manage your zoom settings rules and configurations."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Match Image"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Maximum Scale"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Maximum zoom level users can reach by pinching."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Medium (300×300)"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Medium Large (768px)"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Minimal Slider"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Minimum Scale"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Minimum swipe distance in pixels required to trigger a gallery slide."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Minimum time between scroll-triggered navigations. Higher values slow down how fast scrolling moves through images."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Minimum zoom level (1 = original size)."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Mobile & Touch"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Mobile Breakpoint"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Mobile Fallback"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Mobile"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "More actions"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Mouse Scroll Zoom"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Mouse cursor appearance over the main image."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "Move to Trash"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ConfirmModal.jsx
+msgid "Move to Trash?"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Mute hosted videos by default. Required for autoplay in most browsers. Useful for background-style videos."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Mute the embed by default. Required for autoplay in most browsers. Users can unmute inside the player."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Muted"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Navigation Arrows"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Navigation Type"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Navigation type for the Stacked Layout. Dot Navigation places clickable dots on the side for navigation. Thumbnails shows a vertical strip of thumbnail images instead."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Next"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "No WooCommerce categories found."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "No products added yet."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "No products found"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/EmptyState.jsx
+msgid "No settings rules found"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/EmptyState.jsx
+msgid "No settings rules yet"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "None"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Note:"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Number of columns in the grid below the hero image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Number of columns in the thumbnail grid."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Number of equal-width columns in the tiles grid."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Number of tiles visible before the Show More button is clicked. Set to 0 to show all tiles."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "On Click"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "One large featured image on top with smaller supporting images in a grid below."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SearchPalette.jsx
+msgid "Open Search"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Open navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Open on Image Click"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Open the lightbox viewer, or disable click interaction."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Opening Behaviour"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Outside"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Overlay Arrows"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Overlay dots float on top of the images. Outside places them in a separate column beside the gallery."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Overlay"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Pagination Position"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Pagination Style"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Pagination"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Percentage of the total gallery width used by the sticky viewer column."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Performance"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Pin it"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Pinch-to-zoom behavior on touch devices."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Placement"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Position arrows over the slider edges so thumbnails fill the full strip width."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Position"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Preload Images"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Preload all gallery and zoom images in the background on page load for a smoother experience."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/ShortcutsModal.jsx
+msgid "Press keys…"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/ShortcutsModal.jsx
+msgid "Press"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Previous"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Product Categories"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Progress Bar"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "Publish"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/StatusBadge.jsx
+msgid "Published"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Quick Start"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Redo"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Reset defaults"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Responsive Breakpoint"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Restart hosted videos from the beginning when they end."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Restart the video from the beginning when it ends."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "Restore"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Right Thumbnails"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Right"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Rounded corner radius applied to each grid item."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Rounded corner radius applied to each scroll item."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Rounded corner radius applied to each tile."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Rounded corner radius for thumbnails."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Rounded corner radius of the cursor box. Use 50% of its size for a circle."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Rounded corner radius of the main image and its container."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Rounded corner radius of the main lightbox image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Rounded corner radius of the window."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Rounded corner radius of thumbnail strip items."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/TableBody.jsx
+msgid "Row actions"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Rule Settings"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/TopBar.jsx
+msgid "Save Changes"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/TopBar.jsx
+msgid "Save Settings"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/TopBar.jsx
+msgid "Save all current changes"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/TopBar.jsx
+msgid "Saving…"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Scroll Column"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Scroll Navigation works best when"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Scroll Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Scroll Response Speed"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Search products by name or SKU…"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/controls/ControlSearch.jsx
+msgid "Search rules..."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Search settings (Ctrl+K)"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SearchPalette.jsx
+msgid "Search settings…"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Searching…"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Selected Only"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Selection-box indicator drawn on the main image to show what area the zoom window is displaying."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "Set Draft"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "Set Published"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Set the dimensions of individual thumbnail images."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ActionDropdown.jsx
+msgid "Set to Draft"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Sets the primary display mode for the product gallery."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/CrudApp.jsx
+msgid "Settings Rules"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Settings for YouTube and Vimeo embeds."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Settings for video files uploaded to the WordPress media library."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/TableBody.jsx
+msgid "Settings name…"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Settings specific to the grid layout."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Settings specific to the slider layout."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Share Button"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Share on Facebook"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show Captions"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Show Controls"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Show Cursor"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show Expand Button"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show Less Text"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show More / Show Less"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show More Button"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show More Text"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show Thumbnails"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show a pagination indicator dots for the main image for quick navigation."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show a share button in the toolbar that opens a menu with sharing and download options."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Show an animated spinner while images are loading."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show dot indicators below the mobile carousel for quick navigation."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show navigation indicators below the lightbox image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show only the clicked image in the lightbox instead of the full gallery."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show previous and next arrow buttons for navigating between images."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show previous/next arrow buttons on the main image. Syncs with the thumbnail strip."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show previous/next arrow buttons on the mobile carousel. Independent of the desktop arrow setting."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show previous/next arrow buttons on the thumbnail slider."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show the center toolbar with rotate, flip, and 1:1 zoom buttons."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show the fullscreen toggle button."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show the image alt text as a caption below the image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show the slideshow play/pause toggle button in the toolbar."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Show the thumbnail strip in the mobile carousel fallback. Off by default for a cleaner mobile experience."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Show zoom in and zoom out buttons in the lightbox toolbar."
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ResultsInfo.jsx
+msgid "Showing %1$s–%2$s of %3$s forms"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Single Column"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Single Image Mode"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Size Mode"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Slide Direction"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Slide Interval"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Slide Type"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Slide by Item"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Slide by Row moves a full visible page at once. Slide by Item moves one thumbnail at a time."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Slide by Row"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Slide"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Slider Options"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Slider"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Slideshow"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Smooth the zoom movement for a polished feel."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Smooth the zoom window appearing and disappearing."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Space between the hero image and grid items, and between grid items."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Space between the pagination dots."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Space between the sticky viewer column and the scroll column."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Space between the thumbnail strip and the main image area. Independent of the gap between individual thumbnail items."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Space between thumbnail items."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Space between tiles."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Specific Products"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Spinner Color"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SearchPalette.jsx
+msgid "Spotlight-style settings search"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Square"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Stacked Layout"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Stacked full-width images with a grid thumbnail strip for navigation."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Stacked full-width images with scroll-linked dot navigation."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Start"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/TableHeader.jsx
+msgid "Status"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Step back one change"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Step forward one change"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Sticky Offset"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Sticky Split Right"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Sticky Split"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Sticky Summary"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Sticky Top Offset"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Stretch or shrink thumbnails to fill the full width (or height for left/right) of the main image area."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Stretch the embed to fill the full width and height of the main image area. The video will be cropped as needed to remove any empty space."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Stretch the video to fill the full width and height of the main image area. The video will be cropped as needed to remove any empty space."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Strip Gap"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Style the full-size images in the scrollable column."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Styling applied to the currently selected thumbnail."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Swipe / Drag Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Swipe Navigation"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Swipe Threshold"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Swipe gesture settings for navigating the gallery."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "The color of the loading spinner animation."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thickness of the active thumbnail border."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thickness of the border around the main image area."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Thickness of the lens border in pixels."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Thickness of the selection box border."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Thickness of the window border."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "This rule"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "This will replace your current gallery configuration with the %s preset defaults. Settings in other tabs (Zoom, Lightbox, Mobile, Video) will not be affected."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail (150×150)"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail Gallery"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail Height"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail Image Size"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail Image"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail Position"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail Radius"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail Size"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail Width"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Thumbnail layout, main image display and transitions."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Thumbnails tab"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Thumbnails"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Tiles Grid"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Tiles"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Time between slides during autoplay."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Tip:"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Toolbar Buttons"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Top"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Touch Zoom"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/MobilePanel.jsx
+msgid "Touch zoom and swipe gesture behaviour on mobile."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Transition effect and speed for lightbox."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Transition"
+msgstr ""
+
+#: src/admin/pages/rulesCrud/components/controls/StatusFilter.jsx
+msgid "Trash"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Trigger"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "Try a different name or SKU"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Tweet"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Two-column layout with a scrollable gallery and a sticky product summary."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/PluginSettingsApp.jsx
+msgid "Undo"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Use arrow keys to navigate and Escape to close the lightbox."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Use the mouse scroll wheel to navigate between gallery images. Scrolling in either direction moves to the next or previous image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Use the mouse wheel or trackpad to scroll through thumbnails. Scrolls vertically for left/right strips and horizontally for top/bottom strips."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Variation Image Change"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Variation Images"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GeneralPanel.jsx
+msgid "Variation image handling, preloading and spinner."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Vertical Offset"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Vertical Scroll"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Vertical space between each stacked gallery item."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Vertical space between images in the scroll column."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Vertical thumbnail strip on the left side with a clean fade transition."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Vertical thumbnail strip on the right side with a clean fade transition."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Vertical"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Video Position"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Video"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Videos appear after product images in the gallery thumbnail strip. Clicking a video thumbnail plays it in the main display area. These settings control playback behaviour across all products using this rule."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Viewport width below which mobile settings take effect. Anchor and Sticky Split switch to a standard carousel; Thumbnail Gallery applies the mobile navigation and thumbnail options below. Set to 0 to disable."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Visual appearance of the zoom window panel."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Visual shape of the zoom lens."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "WC Gallery Thumbnail"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "WC Single"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "WC Thumbnail"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "What elements are shown inside the lightbox."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "What happens when a scroll item is clicked."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "When enabled, clicking a scroll item also swaps the sticky viewer to that image. Independent of the lightbox click action."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "When the gallery width drops below this value, left/right thumbnails move to the bottom. Set to 0 to disable."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "Where product videos appear in the gallery thumbnail strip — before or after product images."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Where the pagination appears. Progress Bar and Count support Top or Bottom only."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Where the pagination dots appear in the mobile carousel."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Where the thumbnail strip appears on mobile. Independent of the desktop thumbnail position."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Where the zoom window appears relative to the main image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Where thumbnails appear relative to the main image."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Where thumbnails appear relative to the stacked images. Only left and right are supported for Anchor Navigation."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Which column holds the sticky image viewer."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Which side the scroll-linked navigation dots appear on."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "Width of each thumbnail item on mobile. Set to 0 to use the desktop thumbnail width."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Width of the zoom window in pixels."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Width"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Window Size"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Window Style"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Window"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "With a Left/Right position, enabling"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "With a Left/Right thumbnail position, setting the slide direction to"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "With a Top/Bottom thumbnail position, setting the slide direction to"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "With"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/VideoPanel.jsx
+msgid "YouTube, Vimeo and hosted video playback settings."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Zoom Before Image Loads"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Zoom From Image"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/LightboxPanel.jsx
+msgid "Zoom In / Out"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Zoom Level"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Zoom Settings"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Zoom Type"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomWindowPanel.jsx
+msgid "Zoom Window is inactive"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Zoom Window"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Zoom on Hover"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Zoom tab"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Zoom type, magnification level and lens appearance."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/SettingsSidebar.jsx
+msgid "Zoom"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "Zoom-in"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "all products"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "and adjust the thumbnail settings there to style the thumbnail navigation for the stacked layout."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "and set the Display Mode to"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "and"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "complements the side-by-side layout better."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "complements the stacked layout better."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "disabled."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "go to setting"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/ZoomPanel.jsx
+msgid "is currently disabled in the Zoom tab. Enable it there for this setting to take effect."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "is disabled — enabling both features at the same time could cause interference."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "is recommended — it scales thumbnails to fill the full height of the main image for a cleaner look."
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "navigate"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "selected"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/GalleryPanel.jsx
+msgid "the scroll column acts as the primary navigation. It is recommended to keep"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "this rule"
+msgstr ""
+
+#: src/admin/pages/rulesDetails/ShortcutsModal.jsx
+msgid "to cancel recording"
+msgstr ""
+
+#. JS plural strings
+#: src/admin/pages/rulesDetails/components/panels/AssignmentsPanel.jsx
+msgid "%d category selected"
+msgid_plural "%d categories selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/admin/pages/rulesCrud/components/tableElements/ResultsInfo.jsx
+msgid "item"
+msgid_plural "items"
+msgstr[0] ""
+msgstr[1] ""
