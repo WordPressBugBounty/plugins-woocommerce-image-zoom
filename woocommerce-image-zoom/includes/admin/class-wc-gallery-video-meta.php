@@ -96,7 +96,7 @@ class WPBean_PGS_Video_Meta {
             $this->render_video_row( $i, $video );
         }
         echo '</div>';
-        $upgrade_url = esc_url( wpbean_pgs_fs()->get_upgrade_url() );
+        $upgrade_url = 'https://wpbean.com/woocommerce-product-gallery/?utm_content=WPBean+Product+Gallery+Slider&utm_campaign=adminlink&utm_medium=dash-settings&utm_source=FreeVersion';
         $crown_svg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 16h18"/></svg>';
         echo '<div id="wcpg-pro-limit-notice" class="wcpg-pro-limit-notice" style="display:none">';
         echo '<div class="wcpg-pro-notice-header">';

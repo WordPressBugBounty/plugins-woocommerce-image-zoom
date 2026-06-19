@@ -170,7 +170,7 @@ class WPBean_PGS_Variation_Gallery
                         <?php esc_html_e('Pro', 'wpbean-product-gallery-slider-for-woocommerce'); ?>
                     </span>
                     <span class="wcpg-vg-upgrade-bar-msg"><?php esc_html_e('Assign unique images per variation. Available in Pro.', 'wpbean-product-gallery-slider-for-woocommerce'); ?></span>
-                    <a href="<?php echo esc_url(wpbean_pgs_fs()->get_upgrade_url()); ?>" class="wcpg-vg-upgrade-bar-btn" target="_blank" rel="noopener"><?php esc_html_e('Upgrade', 'wpbean-product-gallery-slider-for-woocommerce'); ?> &rsaquo;</a>
+                    <a href="https://wpbean.com/woocommerce-product-gallery/?utm_content=WPBean+Product+Gallery+Slider&amp;utm_campaign=adminlink&amp;utm_medium=dash-settings&amp;utm_source=FreeVersion" class="wcpg-vg-upgrade-bar-btn" target="_blank" rel="noopener"><?php esc_html_e('Upgrade', 'wpbean-product-gallery-slider-for-woocommerce'); ?> &rsaquo;</a>
                 </div>
 
                 <?php endif; ?>

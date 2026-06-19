@@ -130,7 +130,7 @@ class WPBean_PGS_AdminPages
                     'nonce'          => wp_create_nonce('wp_rest'),
                     'adminUrl'       => admin_url(),
                     'is_premium'     => wpbean_pgs_fs()->is_paying_or_trial(),
-                    'upgradeUrl'     => wpbean_pgs_fs()->get_upgrade_url(),
+                    'upgradeUrl'     => 'https://wpbean.com/woocommerce-product-gallery/?utm_content=WPBean+Product+Gallery+Slider&utm_campaign=adminlink&utm_medium=dash-settings&utm_source=FreeVersion',
                     'connectorsUrl'   => admin_url('options-connectors.php'),
                     'aiSettingsUrl'   => admin_url('admin.php?page=wpbean-product-gallery-ai-settings'),
                     'aiSupported'     => (function_exists('wp_supports_ai') && wp_supports_ai())

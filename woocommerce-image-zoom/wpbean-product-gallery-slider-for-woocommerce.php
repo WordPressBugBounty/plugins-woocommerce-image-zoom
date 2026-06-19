@@ -3,7 +3,7 @@
 /**
  * Plugin Name: WPBean Product Gallery Slider for WooCommerce
  * Description: A powerful and user-friendly plugin that transforms your WooCommerce product galleries into stunning sliders, enhancing the visual appeal of your online store and providing an engaging shopping experience for your customers.
- * Version: 3.0
+ * Version: 3.0.1
  * Author: WPBean
  * Author URI: https://wpbean.com
  * Text Domain: wpbean-product-gallery-slider-for-woocommerce
@@ -46,7 +46,7 @@ if (function_exists('wpbean_pgs_fs')) {
              *
              * @var string
              */
-            const version = '3.0';
+            const version = '3.0.1';
 
             /**
              * Class construcotr
@@ -109,7 +109,7 @@ if (function_exists('wpbean_pgs_fs')) {
             {
                 $links[] = '<a href="' . esc_url(admin_url('/admin.php?page=wpbean-product-gallery-rules', false)) . '">' . esc_html__('Settings', 'wpbean-product-gallery-slider-for-woocommerce') . '</a>';
                 $links[] = '<a href="https://wpbean.com/support/" target="_blank">' . esc_html__('Support', 'wpbean-product-gallery-slider-for-woocommerce') . '</a>';
-                $links[] = '<a href="https://docs.wpbean.com/" target="_blank">' . esc_html__('Documentation', 'wpbean-product-gallery-slider-for-woocommerce') . '</a>';
+                $links[] = '<a href="https://docs.wpbean.com/docs/ai-product-gallery-slider-for-woocommerce/" target="_blank">' . esc_html__('Documentation', 'wpbean-product-gallery-slider-for-woocommerce') . '</a>';
 
                 return $links;
             }

@@ -4,7 +4,7 @@ Tags: woocommerce product gallery slider, product video, additional variation im
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 8.3
-Stable tag: 3.0
+Stable tag: 3.0.1
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -14,7 +14,7 @@ WooCommerce product gallery plugin with slider, zoom, video, variation images, l
 
 Transform your WooCommerce store with a modern product gallery experience featuring slider, zoom, video, lightbox, and variation image support — all in one powerful plugin.
 
-[__Live Demo__](https://product-gallery.wpbean.com/product/stow-organizer/) | [__Full Features List__](https://wpbean.com/woocommerce-product-gallery/) | [__Upgrade to Pro!__](https://wpbean.com/woocommerce-product-gallery/pricing/)
+[__Live Demo__](https://product-gallery.wpbean.com/product/stow-organizer/) | [__Full Features List__](https://wpbean.com/woocommerce-product-gallery/) | [__Documentation__](https://docs.wpbean.com/docs/ai-product-gallery-slider-for-woocommerce/) | [__Upgrade to Pro!__](https://wpbean.com/woocommerce-product-gallery/pricing/)
 
 https://www.youtube.com/watch?v=dlc2Mn_MRRs
 
@@ -725,6 +725,10 @@ Yes. You can start with a ready-made preset and use AI suggestions to customize 
 * Improved WooCommerce product gallery slider performance
 * Improved mobile WooCommerce product gallery experience
 * Optimized for WooCommerce product image SEO and UX
+
+= version 3.0.1 =
+* Documentation URL added in the readme file.
+* Premium URL updated to the landing page.
 
 == Upgrade Notice ==
 

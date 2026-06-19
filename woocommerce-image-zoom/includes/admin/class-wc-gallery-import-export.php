@@ -129,7 +129,7 @@ class WPBean_PGS_Import_Export {
 
             <?php 
         if ( !$is_premium ) {
-            $upgrade_url = esc_url( wpbean_pgs_fs()->get_upgrade_url() );
+            $upgrade_url = 'https://wpbean.com/woocommerce-product-gallery/?utm_content=WPBean+Product+Gallery+Slider&utm_campaign=adminlink&utm_medium=dash-settings&utm_source=FreeVersion';
             ?>
                 <div class="wpbean-pgs-io__pro-notice">
                     <div class="wpbean-pgs-io__pro-notice-icon">

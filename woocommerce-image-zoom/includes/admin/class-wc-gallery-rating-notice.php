@@ -38,7 +38,7 @@ class WPBean_PGS_Rating_Notice
         }
 
         $nonce       = wp_create_nonce(self::AJAX_ACTION);
-        $upgrade_url = function_exists('wpbean_pgs_fs') ? wpbean_pgs_fs()->get_upgrade_url() : '#';
+        $upgrade_url = 'https://wpbean.com/woocommerce-product-gallery/?utm_content=WPBean+Product+Gallery+Slider&utm_campaign=adminlink&utm_medium=dash-settings&utm_source=FreeVersion';
 
         ?>
         <div class="notice wpbean-pgs-rating-notice"
