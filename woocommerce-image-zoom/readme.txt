@@ -1,27 +1,26 @@
-=== Product Gallery Slider for WooCommerce, Product Image Zoom, Product Video, Additional Variation Images Gallery – WPBean ===
+=== AI Product Gallery Slider for WooCommerce, Slider, Zoom, Video & Variation Images - WPBean ===
 Contributors: wpbean, imranwpb
 Tags: woocommerce product gallery slider, product video, additional variation image gallery, woocommerce zoom, product image zoom
 Requires at least: 6.0
 Tested up to: 7.1.2
 Requires PHP: 8.3
-Stable tag: 3.0.2
+Stable tag: 3.0.3
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-WooCommerce product gallery slider with product image zoom, Product video gallery, additional variation images gallery, vertical thumbnail slider.
+WooCommerce product gallery plugin with slider, zoom, video, variation images, lightbox & AI-powered setup.
 
 == Description ==
 
-Product Gallery Slider for WooCommerce with product image zoom, video, lightbox, and additional variation images — all in one powerful gallery plugin.
+Transform your WooCommerce store with a modern product gallery experience featuring slider, zoom, video, lightbox, and variation image support — all in one powerful plugin.
 
-[__Live Demo__](https://product-gallery.wpbean.com/product/stow-organizer/) | [__Full Features List__](https://wpbean.com/woocommerce-product-gallery/) | [__Documentation__](https://docs.wpbean.com/docs/ai-product-gallery-slider-for-woocommerce/) | [__Upgrade to Pro!__](https://wpbean.com/woocommerce-product-gallery/)
+[__Live Demo__](https://product-gallery.wpbean.com/product/stow-organizer/) | [__Full Features List__](https://wpbean.com/woocommerce-product-gallery/) | [__Documentation__](https://docs.wpbean.com/docs/ai-product-gallery-slider-for-woocommerce/) | [__Upgrade to Pro!__](https://wpbean.com/woocommerce-product-gallery/pricing/)
 
 https://www.youtube.com/watch?v=dlc2Mn_MRRs
 
-**WPBean Product Gallery Slider for WooCommerce** is a complete **WooCommerce product gallery plugin** that replaces multiple plugins by combining:
+**AI Product Gallery for WooCommerce** is a complete **WooCommerce product gallery plugin** that replaces multiple plugins by combining:
 
-* WooCommerce Product gallery slider
-* Product thumbnail slider
+* Product gallery slider
 * Product image zoom (hover + lens + window zoom)
 * Product video gallery (YouTube, Vimeo, self-hosted)
 * Additional variation images
@@ -84,21 +83,22 @@ Features include:
 
 👉 Perfect for fast WooCommerce gallery setup without manual configuration.
 
-== WooCommerce Product Gallery Slider Layouts ==
+== Product Gallery Layouts ==
 
 Build attractive WooCommerce product galleries with flexible layout controls.
 
 Features include:
 
-* Product thumbnail slider
+* Thumbnail gallery layout
 * Main image with thumbnail strip
 * Horizontal product gallery
-* Vertical slider with thumbnails
+* Vertical product gallery
 * Thumbnail position:
   ** Top
   ** Bottom
   ** Left
   ** Right
+* Thumbnail slider layout
 * Thumbnail grid layout
 * Thumbnail sizing controls
 * Thumbnail spacing controls
@@ -106,7 +106,7 @@ Features include:
 * Active thumbnail highlighting
 * Responsive gallery behavior
 
-== Product Gallery Slider for WooCommerce ==
+== Product Gallery Slider ==
 
 Create smooth image sliders for WooCommerce products.
 
@@ -127,12 +127,6 @@ Supported transition effects:
 * Slide
 * Zoom
 * None
-
-== Product Thumbnail Slider ==
-
-Display WooCommerce product thumbnails in a smooth, responsive slider for faster product navigation on desktop and mobile devices.
-
-Choose between horizontal and vertical thumbnail layouts to match your store design. Control the number of visible thumbnail columns, customize thumbnail size and spacing, and automatically fit the thumbnail slider to the height or width of the main product image for a clean, professional gallery layout.
 
 == Product Image Zoom for WooCommerce ==
 
@@ -205,22 +199,20 @@ If you are searching for:
 
 this plugin provides a complete solution.
 
-== Additional Variation Images Gallery for WooCommerce ==
+== Additional Variation Images for WooCommerce ==
 
-Create a dedicated additional variation images gallery for WooCommerce and showcase unique images for every product variation. Add additional variation images to give customers a clearer view of different colors, sizes, styles, or product options.
+Improve product variation presentation.
 
 Features include:
 
-* <strong>Unlimited Images per Product Variation</strong> – Add multiple WooCommerce variation images to each product variation.
-* <strong>Variation Image Gallery</strong> – Create a unique additional variation image gallery for every variation.
-* <strong>Add Videos to Variation Galleries</strong> – Enhance your WooCommerce product variation images with variation-specific videos.
-* <strong>Drag & Drop Gallery Sorting</strong> – Easily reorder additional variation images with simple drag-and-drop controls.
-* <strong>Multiple Image Upload</strong> – Upload multiple additional variation images for WooCommerce directly from the WordPress Media Library.
-* <strong>Automatic Variation Image Switching</strong> – When customers select a variation, the main product image and gallery automatically update to display the images assigned to that variation.
+* Automatic image switching
+* Variation image replacement
+* Instant gallery updates
+* Better color and style selection experience
 
-Give each WooCommerce variation its own visual gallery and make it easier for customers to explore products before making a purchase.
+When a customer selects a product variation, the main image updates automatically to match the chosen variation.
 
-== Mobile Optimized Product Gallery Slider ==
+== Mobile Optimized Product Gallery ==
 
 Designed for modern mobile shopping.
 
@@ -291,7 +283,7 @@ Features include:
 * Border radius controls
 * Zoom support
 
-=== Anchor Navigation Product Gallery Slider ===
+=== Anchor Navigation Gallery ===
 
 Create a modern scroll-linked gallery experience.
 
@@ -310,7 +302,7 @@ Ideal for users searching for:
 * Long Product Image Gallery
 * Scroll-Based Product Gallery
 
-=== Sticky Split Product Gallery Slider ===
+=== Sticky Split Gallery ===
 
 Create immersive product galleries with a sticky image viewer.
 
@@ -323,7 +315,7 @@ Features include:
 * Zoom support
 * Lightbox integration
 
-=== Tiles Product Gallery Slider ===
+=== Tiles Gallery ===
 
 Display images in attractive tile layouts.
 
@@ -335,7 +327,7 @@ Features include:
 * Responsive grids
 * Aspect ratio controls
 
-== Advanced Zoom Types for Product Gallery Slider ==
+== Advanced Zoom Types ==
 
 === Lens Zoom ===
 
@@ -495,13 +487,13 @@ Whether you need a simple product image zoom or a complete advanced WooCommerce 
 
 == Frequently Asked Questions ==
 
-= What does this product gallery slider plugin replace in my WooCommerce store? =
+= What does this plugin replace in my WooCommerce store? =
 This plugin is an all-in-one gallery engine that replaces standalone plugins for image zoom, gallery sliders, product videos, additional variation images, and full-screen lightboxes.
 
 = Do I need coding skills to configure the layouts? =
 No coding knowledge is required. You can manage layouts, zoom styles, video integrations, and global rules entirely through an intuitive admin settings interface.
 
-= Is this woocommerce product gallery slider plugin fully mobile responsive? =
+= Is this gallery plugin fully mobile responsive? =
 Yes. The plugin features a mobile-first design that supports touch gestures, swipe navigation, and pinch-to-zoom for an optimized mobile shopping experience.
 
 = How do the Gallery Presets and Rules systems work? =
@@ -519,7 +511,7 @@ The free version includes high-detail Inner and Hover zoom options, while the pr
 = What interactive tools are available inside the full-screen Lightbox? =
 The lightbox includes navigation arrows, image counters, captions, and autoplay slideshows. The premium version adds image rotation, mirror flipping, 1:1 scaling, social sharing, and downloads.
 
-= Which video streaming platforms are supported for product video galleries? =
+= Which video streaming platforms are supported for product galleries? =
 You can embed videos directly into the gallery timeline using YouTube, Vimeo, self-hosted files, or videos from your WordPress Media Library.
 
 = How does the plugin handle variable products? =
@@ -554,7 +546,7 @@ Yes. You can start with a ready-made preset and use AI suggestions to customize 
 
 == Screenshots ==
 
-1. WooCommerce Product gallery slider
+1. WooCommerce product gallery slider
 2. WooCommerce product image zoom
 3. WooCommerce lightbox gallery
 4. WPBean Product Gallery - General Settings
@@ -740,6 +732,12 @@ Yes. You can start with a ready-made preset and use AI suggestions to customize 
 
 = version 3.0.2 =
 * Improved iOS experience for the product gallery slider.
+
+= version 3.0.3 =
+* Added compatibility with Iconic WooThumbs for WooCommerce.
+* Existing WooThumbs product videos can now be automatically detected and displayed in the Product Gallery.
+* Added support for migrating existing WooThumbs video data without manually editing each product.
+* Preserved existing WooThumbs video data during the migration.
 
 == Upgrade Notice ==
 

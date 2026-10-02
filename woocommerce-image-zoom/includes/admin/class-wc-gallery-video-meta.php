@@ -77,7 +77,7 @@ class WPBean_PGS_Video_Meta {
             if ( $product ) {
                 $att_ids = array_filter( array_merge( [$product->get_image_id()], $product->get_gallery_image_ids() ) );
                 foreach ( $att_ids as $att_id ) {
-                    if ( get_post_meta( $att_id, '_wcpg_image_video_url', true ) || get_post_meta( $att_id, '_wcpg_image_video_id', true ) ) {
+                    if ( get_post_meta( $att_id, '_wcpg_image_video_url', true ) || get_post_meta( $att_id, '_wcpg_image_video_id', true ) || WPBean_PGS_Compat_WooThumbs::get_attachment_video_url( (int) $att_id ) ) {
                         $video_att_ids[] = intval( $att_id );
                     }
                 }
@@ -586,8 +586,9 @@ class WPBean_PGS_Video_Meta {
             return '';
         }
         $att_id = intval( $video['attachment_id'] ?? 0 );
+        // Items without an attachment (e.g. imported from WooThumbs) carry a direct URL.
         if ( !$att_id ) {
-            return '';
+            return esc_url_raw( $video['url'] ?? '' );
         }
         return ( wp_get_attachment_url( $att_id ) ?: '' );
     }

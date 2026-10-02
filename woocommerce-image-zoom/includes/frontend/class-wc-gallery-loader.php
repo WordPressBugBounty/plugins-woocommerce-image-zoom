@@ -198,6 +198,7 @@ class WPBean_PGS_WC_Gallery_Loader
 
         $video_items    = get_post_meta($product->get_id(), '_wcpg_videos', true);
         $video_items    = is_array($video_items) ? $video_items : [];
+        $video_items    = WPBean_PGS_Compat_WooThumbs::merge_product_video($video_items, $product);
         $video_position = ($config['videoPosition'] ?? 'end') === 'start' ? 'start' : 'end';
 
         // ── Build wrapper class list ──────────────────────────────────────────

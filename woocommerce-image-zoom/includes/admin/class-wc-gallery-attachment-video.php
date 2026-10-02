@@ -118,6 +118,13 @@ class WPBean_PGS_Attachment_Video {
         // Description placed inside the <td>, not in `helps`, so it does not
         // appear in the <th> label column and disrupt alignment on narrow screens.
         $html .= '<p class="wcpg-att-description">' . esc_html__( 'Paste a YouTube / Vimeo URL, or click the upload icon to select a video file.', 'wpbean-product-gallery-slider-for-woocommerce' ) . '</p>';
+        // Read-only notice when a WooThumbs video is in use for this image.
+        if ( !$has_value ) {
+            $woothumbs_url = WPBean_PGS_Compat_WooThumbs::get_attachment_video_url( $post->ID );
+            if ( $woothumbs_url ) {
+                $html .= '<p class="wcpg-att-description">' . esc_html__( 'Currently using the video from Iconic WooThumbs:', 'wpbean-product-gallery-slider-for-woocommerce' ) . ' <a href="' . esc_url( $woothumbs_url ) . '" target="_blank" rel="noopener">' . esc_html( $woothumbs_url ) . '</a>. ' . esc_html__( 'Add a video above to replace it.', 'wpbean-product-gallery-slider-for-woocommerce' ) . '</p>';
+            }
+        }
         $fields['wcpg_image_video_url'] = [
             'label'         => __( 'Gallery Video', 'wpbean-product-gallery-slider-for-woocommerce' ),
             'input'         => 'html',

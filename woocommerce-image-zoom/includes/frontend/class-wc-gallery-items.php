@@ -113,6 +113,11 @@ class WPBean_PGS_WC_Gallery_Gallery_Items
         $raw_url = get_post_meta($attachment_id, '_wcpg_image_video_url', true);
         $raw_id  = intval(get_post_meta($attachment_id, '_wcpg_image_video_id', true));
 
+        // Fall back to a video linked by Iconic WooThumbs (native always wins).
+        if (! $raw_url && ! $raw_id) {
+            $raw_url = WPBean_PGS_Compat_WooThumbs::get_attachment_video_url($attachment_id);
+        }
+
         if ($raw_url) {
             $yt_id = WPBean_PGS_Video_Meta::extract_youtube_id($raw_url);
             if ($yt_id) {
