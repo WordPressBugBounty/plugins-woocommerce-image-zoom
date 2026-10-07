@@ -7,12 +7,63 @@ if (!defined('ABSPATH')) exit;
  *  - Admin UI field (add / reorder / remove extra images per variation)
  *  - Saving post-meta on each variation post
  *  - Injecting gallery data into woocommerce_available_variation for the frontend
+ *
+ * WooCommerce 11.1+ ships a native variation gallery (featured image + the
+ * variation's `_product_image_gallery` meta). On those versions our own UI is
+ * removed and existing `_wcpg_variation_gallery` data is migrated into core:
+ *  - A batched Action Scheduler job copies our images into core's gallery,
+ *    skipping any variation that already has core gallery images.
+ *  - Until a variation is migrated, a read filter falls back to our meta so
+ *    nothing disappears from the admin UI or the storefront in the meantime.
+ * Our original meta is kept (never deleted) so a WooCommerce downgrade is safe.
  */
 class WPBean_PGS_Variation_Gallery
 {
 
+    /** Our legacy gallery meta (array of attachment IDs). */
+    const META_KEY = '_wcpg_variation_gallery';
+
+    /** Marks a variation whose gallery is now managed by WooCommerce core. */
+    const MIGRATED_META_KEY = '_wcpg_variation_gallery_migrated';
+
+    /** Option set once every variation has been migrated. */
+    const MIGRATION_DONE_OPTION = 'wpbean_pgs_variation_gallery_migrated_at';
+
+    /** Action Scheduler hook for the batched migration. */
+    const MIGRATION_HOOK = 'wpbean_pgs_migrate_variation_galleries';
+
+    const MIGRATION_BATCH_SIZE = 100;
+
+    /**
+     * Whether WooCommerce provides its own variation gallery (11.1+).
+     */
+    public static function is_core_gallery_active()
+    {
+        return defined('WC_VERSION')
+            && version_compare(WC_VERSION, '11.1', '>=')
+            && class_exists('\Automattic\WooCommerce\Internal\VariationGallery\Package');
+    }
+
     public function __construct()
     {
+        // Frontend: inject variation gallery data into the variation payload
+        // Priority 15 runs after inject_variation_image_sizes (priority 10)
+        add_filter('woocommerce_available_variation', [$this, 'inject_gallery_data'], 15, 3);
+
+        if (self::is_core_gallery_active()) {
+            // Read fallback for variations not migrated yet. Runs after core's own
+            // legacy-extension fallback (priority 10).
+            add_filter('woocommerce_product_variation_get_gallery_image_ids', [$this, 'fallback_gallery_image_ids'], 20, 2);
+
+            // Once the merchant saves the core field, core owns the gallery.
+            // Priority 20 runs after core persists the field (priority 10).
+            add_action('woocommerce_admin_process_variation_object', [$this, 'mark_core_managed_on_save'], 20, 2);
+
+            add_action('admin_init', [$this, 'maybe_schedule_migration']);
+            add_action(self::MIGRATION_HOOK, [$this, 'run_migration_batch']);
+            return;
+        }
+
         // Admin: render gallery field right below the variation image (priority 1 = first item)
         add_action('woocommerce_product_after_variable_attributes', [$this, 'render_field'], 1, 3);
 
@@ -25,10 +76,156 @@ class WPBean_PGS_Variation_Gallery
         // Allow the media library AJAX handler to filter by specific attachment IDs
         // when the Edit Gallery button passes a wcpg_ids query arg.
         add_filter('ajax_query_attachments_args', [$this, 'filter_media_query']);
+    }
 
-        // Frontend: inject variation gallery data into the variation payload
-        // Priority 15 runs after inject_variation_image_sizes (priority 10)
-        add_filter('woocommerce_available_variation', [$this, 'inject_gallery_data'], 15, 3);
+    // ─────────────────────────────────────────────────────────────
+    // WooCommerce 11.1+: migrate into the core variation gallery
+    // ─────────────────────────────────────────────────────────────
+
+    /**
+     * Gallery IDs to merge into core for a variation: our images minus the
+     * featured image (core stores that separately as the primary), de-duplicated,
+     * limited to attachments that still exist.
+     */
+    private function get_legacy_ids_for_core($variation_id)
+    {
+        $ids = get_post_meta($variation_id, self::META_KEY, true);
+        if (empty($ids) || !is_array($ids)) {
+            return [];
+        }
+
+        $featured_id = (int) get_post_thumbnail_id($variation_id);
+        $result      = [];
+
+        foreach (array_map('absint', $ids) as $id) {
+            if ($id && $id !== $featured_id && !in_array($id, $result, true) && 'attachment' === get_post_type($id)) {
+                $result[] = $id;
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * Before a variation is migrated (or while the batch job is still running),
+     * expose our images through core's getter so the core admin field and the
+     * storefront both see them. Core images always win.
+     */
+    public function fallback_gallery_image_ids($gallery_image_ids, $variation)
+    {
+        if (!empty($gallery_image_ids)) {
+            return $gallery_image_ids;
+        }
+
+        $variation_id = $variation->get_id();
+        if (!$variation_id || metadata_exists('post', $variation_id, self::MIGRATED_META_KEY)) {
+            return $gallery_image_ids;
+        }
+
+        return $this->get_legacy_ids_for_core($variation_id);
+    }
+
+    /**
+     * The merchant saved the core gallery field, so whatever they saved (even an
+     * empty gallery) is authoritative — stop falling back to / migrating our meta.
+     */
+    public function mark_core_managed_on_save($variation, $index)
+    {
+        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- nonce verified by WooCommerce before this action fires
+        if (!isset($_POST['variable_gallery_image_ids'][$index])) {
+            return;
+        }
+
+        if (metadata_exists('post', $variation->get_id(), self::META_KEY)) {
+            $variation->update_meta_data(self::MIGRATED_META_KEY, 'yes');
+        }
+    }
+
+    public function maybe_schedule_migration()
+    {
+        if (get_option(self::MIGRATION_DONE_OPTION)) {
+            return;
+        }
+
+        if (!function_exists('as_has_scheduled_action') || !function_exists('as_enqueue_async_action')) {
+            return;
+        }
+
+        if (!as_has_scheduled_action(self::MIGRATION_HOOK, [], 'wpbean-pgs')) {
+            as_enqueue_async_action(self::MIGRATION_HOOK, [], 'wpbean-pgs');
+        }
+    }
+
+    /**
+     * Migrate one batch of variations and re-queue itself until none are left.
+     */
+    public function run_migration_batch()
+    {
+        if (get_option(self::MIGRATION_DONE_OPTION)) {
+            return;
+        }
+
+        $variation_ids = $this->get_unmigrated_variation_ids(self::MIGRATION_BATCH_SIZE);
+
+        foreach ($variation_ids as $variation_id) {
+            if (!$this->core_has_gallery($variation_id)) {
+                $ids = $this->get_legacy_ids_for_core($variation_id);
+                if (!empty($ids)) {
+                    update_post_meta($variation_id, '_product_image_gallery', implode(',', $ids));
+                }
+            }
+
+            // Keep our original meta for downgrades; the marker disables the fallback.
+            update_post_meta($variation_id, self::MIGRATED_META_KEY, 'yes');
+            clean_post_cache($variation_id);
+        }
+
+        if (!empty($this->get_unmigrated_variation_ids(1))) {
+            as_enqueue_async_action(self::MIGRATION_HOOK, [], 'wpbean-pgs');
+        } else {
+            update_option(self::MIGRATION_DONE_OPTION, time(), false);
+        }
+    }
+
+    /**
+     * Whether core already has gallery images for this variation — either in
+     * its own meta, or via the retired Additional Variation Images extension
+     * that core still reads as a fallback.
+     */
+    private function core_has_gallery($variation_id)
+    {
+        if (!empty(wp_parse_id_list(get_post_meta($variation_id, '_product_image_gallery', true)))) {
+            return true;
+        }
+
+        return !metadata_exists('post', $variation_id, '_wc_variation_gallery_legacy_fallback_disabled')
+            && !empty(wp_parse_id_list(get_post_meta($variation_id, '_wc_additional_variation_images', true)));
+    }
+
+    private function get_unmigrated_variation_ids($limit)
+    {
+        global $wpdb;
+
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+        return array_map('intval', $wpdb->get_col($wpdb->prepare(
+            "SELECT legacy.post_id
+            FROM {$wpdb->postmeta} AS legacy
+            INNER JOIN {$wpdb->posts} AS posts
+                ON posts.ID = legacy.post_id
+                AND posts.post_type = 'product_variation'
+            LEFT JOIN {$wpdb->postmeta} AS migrated
+                ON migrated.post_id = legacy.post_id
+                AND migrated.meta_key = %s
+            WHERE legacy.meta_key = %s
+                AND legacy.meta_value <> ''
+                AND migrated.post_id IS NULL
+            GROUP BY legacy.post_id
+            ORDER BY legacy.post_id ASC
+            LIMIT %d",
+            self::MIGRATED_META_KEY,
+            self::META_KEY,
+            $limit
+        )));
     }
 
     // ─────────────────────────────────────────────────────────────
@@ -102,7 +299,7 @@ class WPBean_PGS_Variation_Gallery
                     <?php if ($is_premium) : ?>
                     <div class="wcpg-vg-card-actions">
                         <?php
-                        $gallery_ids = get_post_meta($variation->ID, '_wcpg_variation_gallery', true);
+                        $gallery_ids = get_post_meta($variation->ID, self::META_KEY, true);
                         $gallery_ids = is_array($gallery_ids) ? array_values(array_filter(array_map('absint', $gallery_ids))) : [];
                         $has_images  = !empty($gallery_ids);
                         ?>
@@ -193,16 +390,16 @@ class WPBean_PGS_Variation_Gallery
             : '';
 
         if (empty($raw)) {
-            delete_post_meta($variation_id, '_wcpg_variation_gallery');
+            delete_post_meta($variation_id, self::META_KEY);
             return;
         }
 
         $ids = array_values(array_filter(array_map('absint', explode(',', $raw))));
 
         if (empty($ids)) {
-            delete_post_meta($variation_id, '_wcpg_variation_gallery');
+            delete_post_meta($variation_id, self::META_KEY);
         } else {
-            update_post_meta($variation_id, '_wcpg_variation_gallery', $ids);
+            update_post_meta($variation_id, self::META_KEY, $ids);
         }
     }
 
@@ -228,14 +425,29 @@ class WPBean_PGS_Variation_Gallery
         // falls back to the parent product image for variations with no image.
         $variation_data['image']['wcpg_has_image'] = ! empty($variation->get_image_id());
 
+        // WC 11.1+ ships pre-rendered core gallery markup with each variation.
+        // add-to-cart-variation.js replaces the first `.woocommerce-product-gallery`
+        // in the product with it — which is our wrapper — swapping our gallery for
+        // the default flexslider one (and restoring the default one on reset).
+        // Our gallery handles variation swaps itself via wcpg_variation_gallery,
+        // so blank the markup to keep core's JS on its no-op path.
+        if (isset($variation_data['gallery_images_html'])) {
+            $variation_data['gallery_images_html'] = '';
+        }
+
         $config = $result['config'];
 
-        // Feature must be enabled in the settings
-        if (empty($config['variationGallery'])) {
+        // Feature must not be disabled in the settings. A missing key (presets
+        // saved before the option existed) means enabled, matching the JS and
+        // admin defaults.
+        if (isset($config['variationGallery']) && !$config['variationGallery']) {
             return $variation_data;
         }
 
-        $extra_ids = get_post_meta($variation->get_id(), '_wcpg_variation_gallery', true);
+        // WC 11.1+: core's gallery (our fallback filter covers unmigrated variations).
+        $extra_ids = self::is_core_gallery_active()
+            ? array_diff(array_map('absint', $variation->get_gallery_image_ids()), [(int) $variation->get_image_id()])
+            : get_post_meta($variation->get_id(), self::META_KEY, true);
         if (empty($extra_ids) || !is_array($extra_ids)) {
             return $variation_data;
         }
