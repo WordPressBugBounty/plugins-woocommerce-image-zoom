@@ -4,7 +4,7 @@ Tags: woocommerce product gallery slider, product video, additional variation im
 Requires at least: 6.0
 Tested up to: 7.1.3
 Requires PHP: 8.3
-Stable tag: 3.0.5
+Stable tag: 3.0.6
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -751,6 +751,9 @@ Yes. You can start with a ready-made preset and use AI suggestions to customize 
 = version 3.0.5 =
 * Fixed the gallery being replaced by the default WooCommerce gallery when a variation was selected on WooCommerce 11.1 and later (seen with themes like Twenty Twelve).
 * Fixed the default WooCommerce gallery staying on the page after clearing the selected variation.
+
+= version 3.0.6 =
+* Freemius SDK updated.
 
 == Upgrade Notice ==
 
