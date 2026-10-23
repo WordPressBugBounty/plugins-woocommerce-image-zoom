@@ -8,7 +8,7 @@ Stable tag: 3.0.6
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-WooCommerce product gallery plugin with slider, zoom, video, variation images, lightbox & AI-powered setup.
+WooCommerce product gallery slider plugin with zoom, video, variation images, lightbox & AI-powered setup.
 
 == Description ==
 
@@ -27,6 +27,8 @@ https://www.youtube.com/watch?v=dlc2Mn_MRRs
 * WooCommerce lightbox gallery
 * Mobile-optimized product gallery layouts
 * AI-powered gallery assistant
+
+**Compatible with WooCommerce’s new Additional Variation Images Gallery feature.**
 
 = 👉 Ideal for anyone searching for: =
 
