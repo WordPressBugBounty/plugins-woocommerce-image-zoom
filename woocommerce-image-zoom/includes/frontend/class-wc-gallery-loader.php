@@ -192,7 +192,11 @@ class WPBean_PGS_WC_Gallery_Loader
         // ── Resolve config and sizes ──────────────────────────────────────────
         $rule_id     = $result['rule_id'];
         $config      = $result['config'];
-        $config_attr = wp_json_encode($config, JSON_HEX_QUOT | JSON_HEX_APOS);
+        $consent     = WPBean_PGS_Consent::get_blocked_video_services();
+        $config_attr = wp_json_encode(
+            $consent ? array_merge($config, ['videoConsentServices' => $consent]) : $config,
+            JSON_HEX_QUOT | JSON_HEX_APOS
+        );
 
         [$main_size, $thumb_size] = self::_resolve_image_sizes($config);
 

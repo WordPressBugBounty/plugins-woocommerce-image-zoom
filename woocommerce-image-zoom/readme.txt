@@ -2,13 +2,13 @@
 Contributors: wpbean, imranwpb
 Tags: woocommerce product gallery slider, product video, additional variation image gallery, woocommerce zoom, product image zoom
 Requires at least: 6.0
-Tested up to: 7.1.3
+Tested up to: 7.1.4
 Requires PHP: 8.3
-Stable tag: 3.0.6
+Stable tag: 3.0.7
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-WooCommerce product gallery slider plugin with zoom, video, variation images, lightbox & AI-powered setup.
+WooCommerce product gallery plugin with slider, zoom, video, variation images, lightbox & AI-powered setup.
 
 == Description ==
 
@@ -27,8 +27,6 @@ https://www.youtube.com/watch?v=dlc2Mn_MRRs
 * WooCommerce lightbox gallery
 * Mobile-optimized product gallery layouts
 * AI-powered gallery assistant
-
-**Compatible with WooCommerce’s new Additional Variation Images Gallery feature.**
 
 = 👉 Ideal for anyone searching for: =
 
@@ -756,6 +754,12 @@ Yes. You can start with a ready-made preset and use AI suggestions to customize 
 
 = version 3.0.6 =
 * Freemius SDK updated.
+
+= version 3.0.7 =
+* Added Complianz compatibility: YouTube and Vimeo videos in the gallery now stay blocked until the visitor gives consent, when Complianz is blocking those services.
+* Blocked videos show the site's Complianz consent notice and load as soon as the visitor accepts, with no page reload.
+* YouTube and Vimeo thumbnails now wait for the same consent. Thumbnails hosted on your own site load as normal.
+* Added the `wpbean_pgs_video_consent_services` filter for controlling which video types wait for consent.
 
 == Upgrade Notice ==
 
