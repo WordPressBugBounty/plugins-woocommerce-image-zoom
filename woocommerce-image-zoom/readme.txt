@@ -2,9 +2,9 @@
 Contributors: wpbean, imranwpb
 Tags: woocommerce product gallery slider, product video, additional variation image gallery, woocommerce zoom, product image zoom
 Requires at least: 6.0
-Tested up to: 7.1.4
+Tested up to: 7.1.5
 Requires PHP: 8.3
-Stable tag: 3.0.7
+Stable tag: 3.0.8
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -760,6 +760,9 @@ Yes. You can start with a ready-made preset and use AI suggestions to customize 
 * Blocked videos show the site's Complianz consent notice and load as soon as the visitor accepts, with no page reload.
 * YouTube and Vimeo thumbnails now wait for the same consent. Thumbnails hosted on your own site load as normal.
 * Added the `wpbean_pgs_video_consent_services` filter for controlling which video types wait for consent.
+
+= version 3.0.8 =
+* Fixed a fatal error on product pages (Class "WPBean_PGS_Consent" not found) caused by a file missing from the 3.0.7 package.
 
 == Upgrade Notice ==
 

@@ -192,7 +192,8 @@ class WPBean_PGS_WC_Gallery_Loader
         // ── Resolve config and sizes ──────────────────────────────────────────
         $rule_id     = $result['rule_id'];
         $config      = $result['config'];
-        $consent     = WPBean_PGS_Consent::get_blocked_video_services();
+        // Guarded so a missing optional compat file can never fatal the product page.
+        $consent     = class_exists('WPBean_PGS_Consent') ? WPBean_PGS_Consent::get_blocked_video_services() : [];
         $config_attr = wp_json_encode(
             $consent ? array_merge($config, ['videoConsentServices' => $consent]) : $config,
             JSON_HEX_QUOT | JSON_HEX_APOS

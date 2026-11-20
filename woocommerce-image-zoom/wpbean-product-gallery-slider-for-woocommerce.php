@@ -3,17 +3,17 @@
 /**
  * Plugin Name: WPBean Product Gallery Slider for WooCommerce
  * Description: A powerful and user-friendly plugin that transforms your WooCommerce product galleries into stunning sliders, enhancing the visual appeal of your online store and providing an engaging shopping experience for your customers.
- * Version: 3.0.7
+ * Version: 3.0.8
  * Author: WPBean
  * Author URI: https://wpbean.com
  * Text Domain: wpbean-product-gallery-slider-for-woocommerce
  * Domain Path: /languages
  * Requires at least: 5.8
- * Tested up to: 7.1.3
+ * Tested up to: 7.1.5
  * Requires PHP: 8.3
  * Requires Plugins: woocommerce
  * WC requires at least: 7.0
- * WC tested up to: 11.1.2
+ * WC tested up to: 11.3.1
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -46,7 +46,7 @@ if (function_exists('wpbean_pgs_fs')) {
              *
              * @var string
              */
-            const version = '3.0.7';
+            const version = '3.0.8';
 
             /**
              * Class construcotr
@@ -169,7 +169,9 @@ if (function_exists('wpbean_pgs_fs')) {
                 include_once __DIR__ . '/includes/frontend/class-wc-gallery-frontend.php';
                 include_once __DIR__ . '/includes/frontend/class-wc-gallery-skeleton.php';
                 include_once __DIR__ . '/includes/frontend/class-wc-gallery-items.php';
-                include_once __DIR__ . '/includes/frontend/class-wc-gallery-consent.php';
+                if (file_exists(__DIR__ . '/includes/frontend/class-wc-gallery-consent.php')) {
+                    include_once __DIR__ . '/includes/frontend/class-wc-gallery-consent.php';
+                }
                 include_once __DIR__ . '/includes/frontend/class-wc-gallery-loader.php';
                 include_once __DIR__ . '/includes/frontend/class-wc-gallery-shortcode.php';
                 include_once __DIR__ . '/includes/frontend/class-wc-gallery-theme-compat.php';
