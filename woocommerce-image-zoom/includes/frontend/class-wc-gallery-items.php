@@ -87,6 +87,9 @@ class WPBean_PGS_WC_Gallery_Gallery_Items
             } else {
                 $v_embed = WPBean_PGS_Video_Meta::get_embed_url($video, $config);
                 if (! $v_embed) continue;
+                if (class_exists('WPBean_PGS_Consent')) {
+                    $v_thumb = WPBean_PGS_Consent::get_blocked_video_thumb($v_type, (string) ($video['url'] ?? ''), (string) $v_thumb);
+                }
                 printf(
                     '<img style="display:none" data-wcpg-type="%1$s" data-wcpg-embed="%2$s" data-wcpg-thumb="%3$s" alt="%4$s">',
                     esc_attr($v_type),

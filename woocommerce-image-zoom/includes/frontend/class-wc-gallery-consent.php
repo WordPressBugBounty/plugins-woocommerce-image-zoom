@@ -20,6 +20,11 @@ class WPBean_PGS_Consent
      */
     public static function get_blocked_video_services(): array
     {
+        static $cache = null;
+        if (null !== $cache) {
+            return $cache;
+        }
+
         $services = [];
 
         if (function_exists('cmplz_can_run_cookie_blocker') && cmplz_can_run_cookie_blocker()) {
@@ -38,6 +43,45 @@ class WPBean_PGS_Consent
          *
          * @param array $services Video type => consent category.
          */
-        return apply_filters('wpbean_pgs_video_consent_services', $services);
+        $cache = (array) apply_filters('wpbean_pgs_video_consent_services', $services);
+        return $cache;
+    }
+
+    /**
+     * Thumbnail to show for a YouTube / Vimeo item while it is blocked.
+     *
+     * A thumbnail served by the provider is itself a request to that provider,
+     * so the frontend holds it back until consent is given, which left an empty
+     * thumbnail and a black notice. Complianz keeps a copy of the video's
+     * screenshot on this site for its own placeholders; this returns that copy
+     * so the gallery can show it straight away, like ordinary blocked embeds.
+     *
+     * @param string $type      'youtube' | 'vimeo'.
+     * @param string $video_url The video URL the editor entered.
+     * @param string $thumb     Thumbnail URL the gallery would otherwise use.
+     * @return string Local thumbnail URL, or $thumb unchanged.
+     */
+    public static function get_blocked_video_thumb(string $type, string $video_url, string $thumb): string
+    {
+        $services = self::get_blocked_video_services();
+        if (empty($services[$type]) || '' === $video_url) {
+            return $thumb;
+        }
+
+        // A thumbnail hosted on this site (custom media-library image) is fine.
+        if ($thumb && ! preg_match('#^(https?:)?//([^/]+\.)?(youtube\.com|ytimg\.com|vimeocdn\.com)/#i', $thumb)) {
+            return $thumb;
+        }
+
+        if (! function_exists('cmplz_placeholder')) {
+            return $thumb;
+        }
+        if (function_exists('cmplz_use_placeholder') && ! cmplz_use_placeholder($video_url)) {
+            return $thumb;
+        }
+
+        $local = (string) cmplz_placeholder($type, $video_url);
+
+        return $local ? $local : $thumb;
     }
 }

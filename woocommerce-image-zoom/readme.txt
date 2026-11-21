@@ -4,7 +4,7 @@ Tags: woocommerce product gallery slider, product video, additional variation im
 Requires at least: 6.0
 Tested up to: 7.1.5
 Requires PHP: 8.3
-Stable tag: 3.0.8
+Stable tag: 3.0.9
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -763,6 +763,11 @@ Yes. You can start with a ready-made preset and use AI suggestions to customize 
 
 = version 3.0.8 =
 * Fixed a fatal error on product pages (Class "WPBean_PGS_Consent" not found) caused by a file missing from the 3.0.7 package.
+
+= version 3.0.9 =
+* Improved the Complianz consent notice on gallery videos: it now shows the video's screenshot behind Complianz's semi-transparent notice, the same as on ordinary YouTube and Vimeo embeds, instead of a solid black box.
+* YouTube and Vimeo thumbnails now use the copy Complianz keeps on your site while the video is blocked, so the thumbnail strip shows the real video image.
+* Fixed a broken-image icon and alt text showing in the thumbnail strip while a video thumbnail waits for consent.
 
 == Upgrade Notice ==
 
